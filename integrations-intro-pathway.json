@@ -5,7 +5,7 @@
     "courses": [
       {
         "pathway_id" : "dadgoat",
-        "course_id": "integrations-intro",
+        "course_id": "",
         "title": "Intro to Datadog Integrations",
         "description": "An introduction to Datadog integrations"
       }
