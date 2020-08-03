@@ -12,7 +12,7 @@ docker-compose -f ./docker-compose-files/docker-compose-fixed-instrumented.yml u
 
 You can check that storedog is running by clicking on the `storedog` tab next to the `Terminal` tab to your right. **Note:** It takes several minutes for the docker-compose command to fully ramp up, so if you see a page like this one just wait a little bit longer before refreshing the page:
 
-![Port Error](datadog/scenarios/service-level-objectives/assets/katacoda-error.png)
+![Port Error](/datadog/scenarios/service-level-objectives/assets/katacoda-error.png)
 
 In order to start populating Datadog with some interesting data in a short period of time, you can run a command to simulate traffic to the app. Click on the following command to run it in a second terminal window:
 
