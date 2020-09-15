@@ -45,7 +45,6 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uieditorpath": "k8s-yaml-files",
     "showdashboard": true,
     "dashboards": [
       {
