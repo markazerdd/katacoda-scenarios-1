@@ -8,3 +8,5 @@ clear
 cd ecommworkshop
 clear
 prepenvironment
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
