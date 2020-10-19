@@ -1,11 +1,10 @@
-#!/bin/bash
-while [ ! -f "/usr/local/bin/prepenvironment" ]; do
-  sleep 0.3
-done
-sleep 0.3
-
-kubectl create secret generic datadog-api --from-literal=token=$DD_API_KEY
 clear
-
+statuscheck tools
+statuscheck pulls
+mv /ecommworkshop /root
+mv /root/docker-compose.yaml /root/ecommworkshop/docker-compose-files/
+cd /root/ecommworkshop/docker-compose-files
+clear
+cd ecommworkshop
+clear
 prepenvironment
-kubectl get pods

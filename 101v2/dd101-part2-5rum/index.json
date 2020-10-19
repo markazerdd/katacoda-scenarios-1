@@ -1,16 +1,11 @@
 {
-  "difficulty": "Intermediate",
-  "title": "Using Synthetics", 
-  "time": "15 minutes",
+  "time": "10 minutes",
+  "title": "Using Real User Monitoring",
   "details": {
     "intro": {
       "courseData": "background.sh",
       "code": "foreground.sh",
       "text": "intro.md"
-    },
-    "finish": {
-      "text": "finish.md", 
-      "code": "finish.sh"
     },
     "steps": [
       {
@@ -23,39 +18,27 @@
         "text": "step3.md"
       }
     ],
+    "finish": {
+      "text": "finish.md"
+    },
     "assets": {
       "host01": [
         {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }, 
-        {
-          "file": "finish",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }, 
-        {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
+          "file": "docker-compose.yaml",
+          "target": "/root",
           "chmod": "+x"
         }
       ]
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal",
+    "showide": true,
+    "uieditorpath": "/root/ecommworkshop",
     "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "App Dashboard",
-        "port": 30001
-      }
-    ]
+    "dashboards": [{ "name": "StoreDog", "port": 3000 }]
   },
   "backend": {
-    "imageid": "datadog-kubernetes-cluster-running",
-    "reuseConnection": "true",
-    "livetime": "1h"
+    "imageid": "datadog-base-v1"
   }
 }
