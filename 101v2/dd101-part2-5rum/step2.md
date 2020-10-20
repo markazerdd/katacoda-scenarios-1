@@ -1,12 +1,17 @@
-Let's try to break our page to make the test fail.
+Let's interact with the app as a user and see what data shows up in Datadog.
 
-1. Run `cd k8s-yaml-files`{{execute}} and then `kubectl delete -f frontend-service.yaml`{{execute}}. This will remove the frontend service pod.
-2. Now return to Datadog and click the **Run Test Now** button at the top.
-3. It might take a few seconds but you will notice it's still passing. Try clicking the link for the page here: https://[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com.
-4. In the absence of a valid page from a web service, our labs provider shows a page where you can change the port to use. Even though our application is obviously broken, this page still passes the default assertions of our test! So let's update the assertions to be more specific about the content we expect to see at this URL.
-5. Return to the Synthetics test page in Datadog. Click the gear icon at the top and choose **Edit test details**. 
-6. Click **New Assertion** and ensure that `body` contains the text `Datadog APM Water Management Example`. Click **Save Test**. Then **Run Test Now**.
-7. Within a few seconds we should see some alerts on the page. Click on one of them and look at what the problem is.
-8. In the lab terminal, restart the front end by running `kubectl apply -f frontend-service.yaml`{{execute}}. And back in the test results page, click **Run Test Now**. The errors should go away.
-
-  _If the Test Results don't update immediately, you can click the **Refresh** button to update them._
+1. To visit the StoreDog website, click on the `StoreDog` tab next to the terminal. It may take a few seconds to load.
+2. Browse the site a bit like a real user might:
+  1. Look at some products
+  2. Search
+  3. Add something to your cart
+2. After a few seconds, you should start to see data populating in the [RUM Dashboard](https://app.datadoghq.com/rum/list)
+3. If you click `Explorer` you'll get a more detailed view of the interactions.
+4. Along the top of the graph, you can click and explore the types of data that RUM makes accessible to you:
+  1. `Session` groups interactions by user session and includes information about session duration, pages visited, interactions, resources loaded, errors, etc. You can also look at the session attributes to determine the user IP, browser, and other information.
+  2. `Views` shows you what pages users are visiting. Clicking on a row here provides more detail on the view including page load speeds and resources used.
+  3. `User Actions` lists actions taken by a user such as clicks and any custom actions you've defined with the [`addUserAction` API](https://docs.datadoghq.com/real_user_monitoring/browser/advanced_configuration/?tab=npm#custom-user-actions)
+  4. `Errors` provides a list of errors experienced on the user side.
+  5. `Resources` provides a list of all resources served to users.
+  6. `Long Task` provides a listing of any task in a browser that blocks the main thread for more than 50ms.
+5. Further information on the data that RUM collects is available [here](https://docs.datadoghq.com/real_user_monitoring/browser/data_collected/).
