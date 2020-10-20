@@ -12,4 +12,4 @@ This lab uses a docker version of a fake ecommerce website called "StoreDog".
     1. Copy the `clientToken` from the RUM page and assign it to `DD_CLIENT_TOKEN` in the terminal like: `export DD_CLIENT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
     2. Copy the `applicationId` from the RUM page and assign it to `DD_APPLICATION_ID` in the terminal like: `export DD_APPLICATION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 10. To verify, when you run this command, you should see YOUR keys displayed in the terminal: `echo $DD_CLIENT_TOKEN $DD_APPLICATION_ID`{{execute}}
-11. Start our StoreDog app using `docker-compose up -d`{{execute}}
+11. Start our StoreDog app using `docker-compose up -d`{{execute}}. You should see the app starting.
