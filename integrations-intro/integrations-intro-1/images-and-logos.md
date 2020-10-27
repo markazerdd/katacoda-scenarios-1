@@ -1,4 +1,4 @@
-If you've ever installed an Integration in the past, you've probably noticed that they tend to have images associated with them; certainly a logo, but also other graphical elements as well. While these images are superflous during the development stage, there are ultimately three mandatory images that need to be included with any integration meant for consideration upstream.
+If you've ever installed an Integration in the past, you've probably noticed that they tend to have images associated with them; certainly a logo, but also other graphical elements as well. While these images are superfluous during the development stage, there are ultimately three mandatory images that need to be included with any integration meant for consideration upstream.
 
 The [Datadog integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#add-images-and-logos) describes these files and their formats in detail. For our purposes, however, let's keep it simple and let [somebody else](https://placedog.net/) do the work. 😉
 ```

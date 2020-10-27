@@ -5,12 +5,12 @@ ddev release build awesome
 
 The output contains an important line: the path where the wheel file that was built. Let's take a look:
 ```
-ls -l /root/dd/integrations-extras/awesome/dist
+ls -l $HOME/dd/integrations-extras/awesome/dist
 ```{{execute}}
 
 So, what's in that wheel anyway? It's a package, so there should be a way to see the files that are inside it, right? Yes! In fact, it's just a ZIP file with a different extension, so let's take a closer look:
 ```
-unzip -l /root/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl
+unzip -l $HOME/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl
 ```{{execute}}
 
 Alright, it's question time:

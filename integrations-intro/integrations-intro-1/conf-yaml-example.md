@@ -1,4 +1,4 @@
-We've already talked about `conf.yaml.example`, but it's worth taking a look at the generated output to get a feel for how the `spec.yaml` file is used. Take a moment to look at `awesome/datadog_checks/awesome/data/conf.yaml.example` with an eye to the following questions:
+We've already talked about `conf.yaml.example`, but it's worth taking a look at the generated output to get a feel for how the `spec.yaml` file is used. Take a moment to look at `dd/integrations-extras/awesome/datadog_checks/awesome/data/conf.yaml.example`{{open}} with an eye to the following questions:
 - If we wanted to monitor _another_ URL, how would we do that?
   - What would we need to do in `spec.yaml`?
 - What, if anything, would un-commenting the `flag_follow_redirects` option do?

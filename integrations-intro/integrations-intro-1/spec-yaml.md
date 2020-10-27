@@ -2,7 +2,7 @@ All integrations come with a `conf.yaml.example` file that provides a starting p
 
 The `spec.yaml` file defines the contents of the example configuration and is used not only by the local tooling, but by the upstream Datadog CI/CD system as well. If you're thinking to yourself, "why are we using one YAML file to generate another YAML file?", well, that's a reasonable question. The answer is simple enough: to force standards and clean configuration file hygiene. Eventually _all_ of the various configuration files will be generated via templates, but for now it's just this one.
 
-Pop over to the [Configuration template](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#create-the-check-assets) section of the Datadog docs and paste the example into `awesome/assets/configuration/spec.yaml`. From there, you can generate the example configuration via `ddev validate config --sync awesome`{{execute}}.
+Pop over to the [Configuration template](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#create-the-check-assets) section of the Datadog docs and paste the example into `dd/integrations-extras/awesome/assets/configuration/spec.yaml`{{open}}. From there, you can generate the example configuration via `ddev validate config --sync awesome`{{execute}}.
 
 If you want to learn more about `spec.yaml`, the [Datadog integrations-core developer site](https://datadoghq.dev/integrations-core/meta/config-specs/) goes into great detail, and you'll want to review it for any real-world integration. For now, however, let's ponder a few questions:
 - What does the `--sync` argument to `ddev` indicate, exactly?

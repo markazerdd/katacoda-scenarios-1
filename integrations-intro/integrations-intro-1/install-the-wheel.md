@@ -1,6 +1,6 @@
 Now that we have an installable artefact, we can go ahead and install it via the Agent directly:
 ```
-cp /root/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl /tmp
+cp $HOME/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl /tmp
 sudo -u dd-agent datadog-agent integration install -w /tmp/datadog_awesome-0.0.1-py2.py3-none-any.whl
 ```{{execute}}
 
@@ -15,6 +15,6 @@ Wondering what's going on there? Let's break it down:
 - Install an integration from a wheel, specifically.
 
 `/tmp/datadog_awesome-0.0.1-py2.py3-none-any.whl`
-- The path of the wheel.
+- The path of the file.
 
 Question: Why copy the wheel to `/tmp/` first?
