@@ -13,4 +13,4 @@
 # Ready to go!
 echo "You're good to go!"
 
-exit 0
+# exit 0
