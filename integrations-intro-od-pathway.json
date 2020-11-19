@@ -4,8 +4,8 @@
     "icon": "fa-katacoda",
     "courses": [
       {
-        "pathway_id" : "dadgoat",
-        "course_id": "integrations-intro",
+        "pathway_id" : "dadgoat/integrations-intro-od",
+        "course_id": "integrations-intro-1",
         "title": "Intro to Datadog Integrations",
         "description": "An introduction to Datadog integrations"
       }
