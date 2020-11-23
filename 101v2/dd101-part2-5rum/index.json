@@ -30,7 +30,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "showide": true,
+    "showide": "true",
     "uieditorpath": "/root",
     "showdashboard": true,
     "dashboards": [{ "name": "StoreDog", "port": 3000 }]
