@@ -9,10 +9,8 @@
     },
     "steps": [
       {
-        "text": "step1.md"
-      },
-      {
-        "text": "step2.md"
+        "text": "step1.md",
+        "title": "Using Real User Monitoring"
       }
     ],
     "finish": {
@@ -31,7 +29,7 @@
   "environment": {
     "uilayout": "terminal",
     "showide": true,
-    "uieditorpath": "/",
+    "uieditorpath": "/root/ecommworkshop",
     "showdashboard": true,
     "dashboards": [{ "name": "StoreDog", "port": 3000 }]
   },

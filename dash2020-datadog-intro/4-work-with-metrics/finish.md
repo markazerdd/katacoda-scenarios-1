@@ -1,0 +1,1 @@
+So now you have a better idea of how to work with metrics in Datadog. You saw how to configure the Agent, how to enable integrations, review the included dashboards, and more. Click next then wait for the code to move on to the next section.

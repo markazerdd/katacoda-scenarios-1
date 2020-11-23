@@ -1,6 +1,6 @@
 {
-  "time": "10 minutes",
-  "title": "Using Real User Monitoring",
+  "time": "7 minutes",
+  "title": "Aggregating Logs",
   "details": {
     "intro": {
       "courseData": "background.sh",
@@ -9,10 +9,8 @@
     },
     "steps": [
       {
-        "text": "step1.md"
-      },
-      {
-        "text": "step2.md"
+        "text": "step1.md",
+        "title": "Looking at Logs"
       }
     ],
     "finish": {
@@ -22,8 +20,7 @@
       "host01": [
         {
           "file": "docker-compose.yaml",
-          "target": "/root",
-          "chmod": "+x"
+          "target": "/root"
         }
       ]
     }
@@ -31,7 +28,13 @@
   "environment": {
     "uilayout": "terminal",
     "showide": true,
-    "uieditorpath": "/",
+    "uieditorpath": "/root/ecommworkshop",
+    "terminals": [
+      {
+        "name": "Terminal 2",
+        "target": "host01"
+      }
+    ],
     "showdashboard": true,
     "dashboards": [{ "name": "StoreDog", "port": 3000 }]
   },

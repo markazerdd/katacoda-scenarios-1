@@ -1,0 +1,4 @@
+statuscheck tools
+clear 
+
+prepenvironment

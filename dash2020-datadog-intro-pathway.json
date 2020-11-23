@@ -1,0 +1,51 @@
+{
+  "title": "Introduction to Datadog - Dash 2020",
+  "description": "Updated Introduction to Datadog for Dash",
+  "courses": [
+    {
+      "course_id": "1-getting-started",
+      "title": "getting started",
+      "description": "this is getting started"
+    },
+    {
+      "course_id": "2-installagent-host",
+      "title": "Installing the Agent on a Host",
+      "description": "All about installing the agent on the host"
+    },
+    {
+      "course_id": "3-installagent-docker",
+      "title": "Installing the Agent on Docker",
+      "description": "All about installing the agent on Docker"
+    },
+    {
+      "course_id": "4-work-with-metrics",
+      "title": "Working with Metrics",
+      "description": "Start working with Metrics"
+    },
+    {
+      "course_id": "5-building-dashboards",
+      "title": "Building Dashboards",
+      "description": "Start Building Dashboards"
+    },
+    {
+      "course_id": "6-getting-started-with-apm",
+      "title": "Working with Traces",
+      "description": "Start working with APM"
+    },
+    {
+      "course_id": "7-aggregating-logs",
+      "title": "Aggregating Logs",
+      "description": "Start working with Logs"
+    },
+    {
+      "course_id": "8-using-synthetics",
+      "title": "Using Synthetics",
+      "description": "Start working with Synthetics"
+    },
+    {
+      "course_id": "9-real-user-monitoring",
+      "title": "Working with RUM",
+      "description": "Start working with Rum"
+    }
+  ]
+}

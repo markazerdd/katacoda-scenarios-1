@@ -1,6 +1,6 @@
 {
-  "time": "10 minutes",
-  "title": "Using Real User Monitoring",
+  "time": "5 minutes",
+  "title": "Installing the Agent",
   "details": {
     "intro": {
       "courseData": "background.sh",
@@ -9,10 +9,8 @@
     },
     "steps": [
       {
-        "text": "step1.md"
-      },
-      {
-        "text": "step2.md"
+        "text": "step1.md",
+        "title": "Install the Agent on Docker"
       }
     ],
     "finish": {
@@ -21,8 +19,8 @@
     "assets": {
       "host01": [
         {
-          "file": "docker-compose.yaml",
-          "target": "/root",
+          "file": "docker-compose.yml",
+          "target": "/root/lab",
           "chmod": "+x"
         }
       ]
@@ -31,9 +29,13 @@
   "environment": {
     "uilayout": "terminal",
     "showide": true,
-    "uieditorpath": "/",
-    "showdashboard": true,
-    "dashboards": [{ "name": "StoreDog", "port": 3000 }]
+    "uieditorpath": "/root/lab",
+    "terminals": [
+      {
+        "name": "Terminal 2",
+        "command": "cd /root/lab"
+      }
+    ]
   },
   "backend": {
     "imageid": "datadog-base-v1"

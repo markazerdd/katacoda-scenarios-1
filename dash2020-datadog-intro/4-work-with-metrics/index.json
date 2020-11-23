@@ -1,6 +1,6 @@
 {
-  "time": "10 minutes",
-  "title": "Using Real User Monitoring",
+  "time": "15 minutes",
+  "title": "Working with Metrics",
   "details": {
     "intro": {
       "courseData": "background.sh",
@@ -9,10 +9,12 @@
     },
     "steps": [
       {
-        "text": "step1.md"
-      },
+        "text": "step1.md",
+        "title": "Configuring Metrics"
+      }, 
       {
-        "text": "step2.md"
+        "text": "step2.md",
+        "title": "Working with Metrics"
       }
     ],
     "finish": {
@@ -20,18 +22,20 @@
     },
     "assets": {
       "host01": [
+
         {
           "file": "docker-compose.yaml",
-          "target": "/root",
+          "target": "/root/lab/ecommerceapp",
           "chmod": "+x"
         }
+
       ]
     }
   },
   "environment": {
     "uilayout": "terminal",
     "showide": true,
-    "uieditorpath": "/",
+    "uieditorpath": "/root/lab/ecommerceapp",
     "showdashboard": true,
     "dashboards": [{ "name": "StoreDog", "port": 3000 }]
   },
