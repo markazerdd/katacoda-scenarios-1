@@ -29,7 +29,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "vscode-terminal-split",
     "showide": true,
     "uieditorpath": "/root/ecommworkshop",
     "showdashboard": true,
