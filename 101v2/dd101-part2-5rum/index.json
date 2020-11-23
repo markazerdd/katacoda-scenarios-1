@@ -29,9 +29,9 @@
     }
   },
   "environment": {
-    "uilayout": "vscode-terminal-split",
+    "uilayout": "terminal",
     "showide": true,
-    "uieditorpath": "/root/ecommworkshop",
+    "uieditorpath": "/root",
     "showdashboard": true,
     "dashboards": [{ "name": "StoreDog", "port": 3000 }]
   },
