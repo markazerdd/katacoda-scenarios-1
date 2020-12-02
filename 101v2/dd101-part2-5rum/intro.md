@@ -1,9 +1,9 @@
-In this lab, we're going to use Real User Monitoring (RUM) to get end-to-end visibility into the real-time activity and experience of individual users. 
+Datadog’s Real User Monitoring (RUM) gives you end-to-end visibility into the real-time activity and experience of individual users. It is designed to solve 4 types of use cases for web and mobile applications:
+* Performance: track the performance of web pages, application screens, but also of user actions, network requests, and the performance of your front-end code
+* Error Management: monitor the ongoing bugs and issues and track them over time
+* Analytics / Usage: understand who is using your application (country, device, OS…), monitor individual users journeys, and analyze how users interact with your application (most common page visited, clicks, interactions, feature usage…)
+* Support: retrieve all of the information related to one user session to troubleshoot an issue (session duration, pages visited, interactions, resources loaded, errors…)
 
-Datadog RUM is supported on multiple platforms, including iOS and Android. This lab focuses on using Datadog RUM in the browser. This is enabled by a snippet of JavaScript code that you add to your website. This gathers user interactions with your site and sends them to Datadog.  Our built-in dashboard allows you to track page views, load times, errors, and information about your users’ browsers and devices.
-
-Having this data available also allows your support teams to look into specific user sessions when an issue is reported. You can find the affected user’s sessions and reconstruct the circumstances and sequence of actions leading up to the reported bug.
-
-By correlating real user data with your own business objectives, you can prioritize your engineering efforts—shipping new features, fixing bugs, or refactoring for performance gains—based on the expected impact these improvements will have on your business.
+Datadog RUM is supported on multiple platforms, including iOS and Android. This lab focuses on using Datadog RUM in the browser. This is enabled by a snippet of JavaScript code that you add to your website. This gathers user interactions with your site and sends them to Datadog.
 
 Let's get started using RUM!
