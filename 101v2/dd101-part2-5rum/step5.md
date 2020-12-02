@@ -1,0 +1,1 @@
+- Competitors - aggregated data, with RUM explorer you can dive into granular data (single page view, single error, etc)
