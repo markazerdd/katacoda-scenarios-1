@@ -56,7 +56,7 @@
   },
   "backend": {
     "imageid": "datadog-kubernetes-cluster-running",
-    "reuseConnection": "true",
+    "reuseConnection": "false",
     "livetime": "1h"
   }
 }

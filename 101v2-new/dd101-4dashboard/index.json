@@ -63,6 +63,7 @@
     "showdashboard": true
   },
   "backend": {
-    "imageid": "datadog-intro"
+    "imageid": "datadog-intro",
+    "reuseConnection": "false"
   }
 }

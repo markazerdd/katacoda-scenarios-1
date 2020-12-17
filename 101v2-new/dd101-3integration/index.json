@@ -67,6 +67,7 @@
     ]
   },
   "backend": {
-    "imageid": "datadog-ubuntu"
+    "imageid": "datadog-ubuntu",
+    "reuseConnection": "false"
   }
 }
