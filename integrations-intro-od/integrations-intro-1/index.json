@@ -136,13 +136,13 @@
     }
   },
   "environment": {
-    "uilayout": "vscode-terminal-split",
+    "uilayout": "editor-terminal",
     "hideHiddenFiles": true,
     "exclusionPatterns": ["/root/dd/integrations-extras/awesome/.tox/*", "/root/dd/integrations-extras/venv/*"]
   },
   "backend": {
     "imageid": "datadog-base-v1",
-    "reuseConnection": true,
+    "reuseConnection": false,
     "livetime": "210m"
   }
 }
