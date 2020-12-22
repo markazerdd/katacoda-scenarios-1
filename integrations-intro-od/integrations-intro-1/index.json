@@ -136,7 +136,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
+    "uilayout": "vscode-terminal-split",
     "hideHiddenFiles": true,
     "exclusionPatterns": ["/root/dd/integrations-extras/awesome/.tox/*", "/root/dd/integrations-extras/venv/*"]
   },
