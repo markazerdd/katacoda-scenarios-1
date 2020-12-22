@@ -14,18 +14,18 @@ Questions:
 <details>
   <summary>What did that `| head` portion of the dry-run command do?</summary>
   
-  This "pipes" (`|`) the output to the `head` command, which displays the first couple lines of the output.
+  - This "pipes" (`|`) the output to the `head` command, which displays the first couple lines of the output.
   
 </details>
 <details>
   <summary>What happens if we _don't_ capitalise the Check name?</summary>
   
-  It will give a warning that you should be using a display name here. It expects the display name to contain a capital letter.
+  - It will give a warning that you should be using a display name here. It expects the display name to contain a capital letter.
   
 </details>
 <details>
   <summary>What other arguments could we pass to `ddev create`? How could we find out?</summary>
   
-  The other arguments are listed in the [documentation](https://datadoghq.dev/integrations-core/ddev/cli/#create).
+  - The other arguments are listed in the [documentation](https://datadoghq.dev/integrations-core/ddev/cli/#create).
   
 </details>
