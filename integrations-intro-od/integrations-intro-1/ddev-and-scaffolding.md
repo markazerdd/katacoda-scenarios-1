@@ -17,5 +17,15 @@ Questions:
   This "pipes" (`|`) the output to the `head` command, which displays the first couple lines of the output.
   
 </details>
-- What happens if we _don't_ capitalise the Check name?
-- What other arguments could we pass to `ddev create`? How could we find out?
+<details>
+  <summary>What happens if we _don't_ capitalise the Check name?</summary>
+  
+  It will give a warning that you should be using a display name here. It expects the display name to contain a capital letter.
+  
+</details>
+<details>
+  <summary>What other arguments could we pass to `ddev create`? How could we find out?</summary>
+  
+  The other arguments are listed in the [documentation](https://datadoghq.dev/integrations-core/ddev/cli/#create).
+  
+</details>
