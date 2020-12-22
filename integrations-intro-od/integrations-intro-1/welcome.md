@@ -8,11 +8,13 @@ The file explorer can be used to navigate the file system, create files and fold
 - Name the file `hello_world`.
 - Click on `hello_world` to open the file in the editor (feel free to type something).
 - Close the file by clicking on the little `x` in the tab above the editor panel.
-  - Note the _lack_ of a save button…
+  - Note that there is no "save" button - the editor autosaves frequently.
 
 Files can also be opened in the editor via special links, for example: `hello_world`{{open}}.
 
-When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off. The init will be complete when you see `You're good to go!`. Oh, one last thing: whenever you see some `fixed-width text` with a ⏎ following it, that means you can click on the text to execute that command in the terminal. For example: `echo "Hello, World!"`{{execute}}
+When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off. The init will be complete when you see `You're good to go!`. One of the things we are doing as part of the init is setting the version of Python to 3.x, which is required by our tooling.
+
+Oh, one last thing: whenever you see some `fixed-width text` with a ⏎ following it, that means you can click on the text to execute that command in the terminal. For example: `echo "Hello, World!"`{{execute}}
 
 And while this has already been said, it's very important: do _not_ close or exit from the terminal. You'll have to start all over again if you do.
 
