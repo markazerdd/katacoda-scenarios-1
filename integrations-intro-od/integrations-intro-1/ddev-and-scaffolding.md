@@ -8,9 +8,14 @@ This will show you the directory where the scaffolding will be generated, as wel
 ddev create Awesome
 ```{{execute}}
 
-This will ask you some basic questions and then create the scaffolding right where we expect it to be.
+This will ask you some basic questions in the terminal and then create the scaffolding right where we expect it to be. For this training, you can put anything in for the email and name. Keep in mind that when you publish your integration, the support email will be listed in the public repo.
 
 Questions:
-- What did that `| head` portion of the dry-run command do?
+<details>
+  <summary>What did that `| head` portion of the dry-run command do?</summary>
+  
+  This "pipes" (`|`) the output to the `head` command, which displays the first couple lines of the output.
+  
+</details>
 - What happens if we _don't_ capitalise the Check name?
 - What other arguments could we pass to `ddev create`? How could we find out?

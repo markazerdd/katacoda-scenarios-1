@@ -12,11 +12,9 @@ This is our first look at `ddev`, a [command-line tool](https://datadoghq.dev/in
 ddev config set repo extras
 ```{{execute}}
 
-Note that (outside of this training) if you are working on a marketplace integration or other repo, you can specify that too:
+Note that (outside of this training) if you are working on a marketplace integration, you can specify that too:
 ```
-  -c, --core            Work on `integrations-core`.
-  -e, --extras          Work on `integrations-extras`.
-  -a, --agent           Work on `datadog-agent`.
-  -m, --marketplace     Work on `marketplace`.
-  -x, --here            Work on the current location.
+core        -> Work on 'integrations-core'
+extras      -> Work on 'integrations-extras'
+marketplace -> Work on 'marketplace'
 ```
