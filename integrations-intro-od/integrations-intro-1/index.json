@@ -142,7 +142,7 @@
   },
   "backend": {
     "imageid": "datadog-base-v1",
-    "reuseConnection": true,
+    "reuseConnection": false,
     "livetime": "210m"
   }
 }
