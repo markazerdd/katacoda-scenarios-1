@@ -12,6 +12,6 @@ update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 apt-get -y update
 apt-get -y install python3.8-venv
 # Ready to go!
-echo "You're good to go!"
-
+echo "You're good to go! - 1"
+echo "You're good to go! - 2"
 # exit 0
