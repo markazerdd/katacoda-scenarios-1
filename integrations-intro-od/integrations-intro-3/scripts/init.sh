@@ -23,6 +23,9 @@ python -m venv venv
 pip install "datadog-checks-dev[cli]"
 ddev config set repo extras
 
+#Module 2
+unzip ~/awesome.zip -d .
+
 # Ready to go!
 echo "You're good to go!"
 # exit 0
