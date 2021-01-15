@@ -1,0 +1,104 @@
+{
+  "title": "Intro to Datadog Integrations",
+  "description": "An introduction to Datadog integrations",
+  "difficulty": "Beginner",
+  "time": "However much you need 🏖",
+  "details": {
+    "assets": {
+      "host01": [
+        { "file": ".vimrc", "target": "~/" }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Introducing integration tests",
+        "text": "introducing-integration-tests.md"
+      },
+      {
+        "title": "Docker config for a basic integration test",
+        "text": "docker-conf-integration-test.md"
+      },
+      {
+        "title": "A basic integration test",
+        "text": "basic-integration-test.md"
+      },
+      {
+        "title": "Add the basic integration test",
+        "text": "add-integration-test.md"
+      },
+      {
+        "title": "Run the basic integration test",
+        "text": "run-basic-integration-test.md"
+      },
+      {
+        "title": "Populate the README",
+        "text": "populate-the-readme.md"
+      },
+      {
+        "title": "Introducing configuration files",
+        "text": "introducing-configuration-files.md"
+      },
+      {
+        "title": "spec.yaml",
+        "text": "spec-yaml.md"
+      },
+      {
+        "title": "conf.yaml.example",
+        "text": "conf-yaml-example.md"
+      },
+      {
+        "title": "Populate manifest.json",
+        "text": "populate-manifest-json.md"
+      },
+      {
+        "title": "Populate service_checks.json",
+        "text": "populate-service-checks-json.md"
+      },
+      {
+        "title": "Introducing metadata.csv",
+        "text": "introducing-metadata-csv.md"
+      },
+      {
+        "title": "Images and logos",
+        "text": "images-and-logos.md"
+      },
+      {
+        "title": "Build the wheel",
+        "text": "build-the-wheel.md"
+      },
+      {
+        "title": "Install the wheel",
+        "text": "install-the-wheel.md"
+      },
+      {
+        "title": "Enable the integration in the Agent",
+        "text": "enable-the-integration.md"
+      },
+      {
+        "title": "Verify the activation",
+        "text": "verify-the-activation.md"
+      },
+      {
+        "title": "Set up a dashboard",
+        "text": "set-up-a-dashboard.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "scripts/init.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["/root/dd/integrations-extras/awesome/.tox/*", "/root/dd/integrations-extras/venv/*"]
+  },
+  "backend": {
+    "imageid": "datadog-base-v1",
+    "reuseConnection": false,
+    "livetime": "210m"
+  }
+}

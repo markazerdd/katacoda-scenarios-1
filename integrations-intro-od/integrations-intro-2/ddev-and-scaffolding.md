@@ -1,3 +1,5 @@
+Wait until you see "You're good to go!" in the terminal before moving on, the environment is being configured.
+
 One of the developer toolkit features is the `create` command, which creates the basic file and path structure (or "scaffolding") necessary for a new integration. Let's try a dry-run using the `-n` flag, which won't write anything to disk:
 ```
 ddev create -n Awesome | head -n 2
