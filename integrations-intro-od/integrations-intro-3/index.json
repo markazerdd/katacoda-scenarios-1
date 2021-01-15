@@ -6,7 +6,8 @@
   "details": {
     "assets": {
       "host01": [
-        { "file": ".vimrc", "target": "~/" }
+        { "file": ".vimrc", "target": "~/" },
+        { "file": "awesome.zip", "target": "~/" }
       ]
     },
     "steps": [
