@@ -12,12 +12,8 @@
     },
     "steps": [
       {
-        "title": "Introducing metadata.csv",
-        "text": "introducing-metadata-csv.md"
-      },
-      {
-        "title": "Images and logos",
-        "text": "images-and-logos.md"
+        "title": "Install the Datadog Agent",
+        "text": "install-datadog-agent.md"
       },
       {
         "title": "Build the wheel",

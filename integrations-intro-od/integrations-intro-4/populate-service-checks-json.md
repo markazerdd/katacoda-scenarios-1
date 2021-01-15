@@ -1,4 +1,4 @@
-The `service_check.json` file describes any and all service checks made by the integration. That's it! Grab the sample configuration from the [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=servicecheck#example-service-check-config) and drop it into `dd/integrations-extras/awesome/assets/service_checks.json`{{open}}. Make sure to replace the existing contents of the file.
+The `service_check.json` file describes any and all service checks made by the integration. That's it! Grab the sample configuration from the [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=servicecheck#example-service-check-config)(you may need to scroll down to fid it) and drop it into `dd/integrations-extras/awesome/assets/service_checks.json`{{open}}. Make sure to replace the existing contents of the file.
 
 An important question to consider:
 <details>
