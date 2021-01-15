@@ -12,26 +12,6 @@
     },
     "steps": [
       {
-        "title": "Introducing integration tests",
-        "text": "introducing-integration-tests.md"
-      },
-      {
-        "title": "Docker config for a basic integration test",
-        "text": "docker-conf-integration-test.md"
-      },
-      {
-        "title": "A basic integration test",
-        "text": "basic-integration-test.md"
-      },
-      {
-        "title": "Add the basic integration test",
-        "text": "add-integration-test.md"
-      },
-      {
-        "title": "Run the basic integration test",
-        "text": "run-basic-integration-test.md"
-      },
-      {
         "title": "Populate the README",
         "text": "populate-the-readme.md"
       },
