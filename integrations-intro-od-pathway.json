@@ -26,6 +26,12 @@
         "course_id": "integrations-intro-4",
         "title": "TBD",
         "description": "TBD"
+      },
+      {
+        "pathway_id" : "dadgoat/integrations-intro-od",
+        "course_id": "integrations-intro-5",
+        "title": "TBD",
+        "description": "TBD"
       }
     ]
   }
