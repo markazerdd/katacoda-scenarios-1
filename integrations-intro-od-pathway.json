@@ -20,6 +20,12 @@
         "course_id": "integrations-intro-3",
         "title": "Integration Test",
         "description": "Write an integration test for the integration."
+      },
+      {
+        "pathway_id" : "dadgoat/integrations-intro-od",
+        "course_id": "integrations-intro-4",
+        "title": "TBD",
+        "description": "TBD"
       }
     ]
   }

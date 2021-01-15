@@ -1,4 +1,4 @@
-Now we'll run the integration test on its own:
+Now we'll run the integration test on its own (the `-m integration` specifies that we only want to run tests with the `integration` mark):
 ```
 ddev test -m integration awesome
 ```{{execute}}

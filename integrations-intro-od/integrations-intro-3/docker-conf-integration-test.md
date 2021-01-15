@@ -6,8 +6,18 @@ cd $HOME/dd/integrations-extras/
 touch awesome/tests/docker-compose.yml
 ```{{execute}}
 
-Now just copy and paste to `dd/integrations-extras/awesome/tests/docker-compose.yml`{{open}} for the win!
+Now just copy and paste to `dd/integrations-extras/awesome/tests/docker-compose.yml`{{open}}!
 
 As always, it's good to ask some questions:
-- Which web server software will be installed?
-- What port will be exposed to our test harness?
+<details>
+  <summary>Which web server software will be installed?</summary>
+  
+  - `nginx`
+  
+</details>
+<details>
+  <summary>What port will be exposed to our test harness?</summary>
+  
+  - Port `8000` is being exposed. (and mapped to port `80` internally)
+  
+</details>

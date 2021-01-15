@@ -1,6 +1,6 @@
 {
-  "title": "Intro to Datadog Integrations",
-  "description": "An introduction to Datadog integrations",
+  "title": "Intro to Datadog Integrations - Integration Test",
+  "description": "Make an integration test for the integration.",
   "difficulty": "Beginner",
   "time": "However much you need 🏖",
   "details": {
@@ -30,58 +30,6 @@
       {
         "title": "Run the basic integration test",
         "text": "run-basic-integration-test.md"
-      },
-      {
-        "title": "Populate the README",
-        "text": "populate-the-readme.md"
-      },
-      {
-        "title": "Introducing configuration files",
-        "text": "introducing-configuration-files.md"
-      },
-      {
-        "title": "spec.yaml",
-        "text": "spec-yaml.md"
-      },
-      {
-        "title": "conf.yaml.example",
-        "text": "conf-yaml-example.md"
-      },
-      {
-        "title": "Populate manifest.json",
-        "text": "populate-manifest-json.md"
-      },
-      {
-        "title": "Populate service_checks.json",
-        "text": "populate-service-checks-json.md"
-      },
-      {
-        "title": "Introducing metadata.csv",
-        "text": "introducing-metadata-csv.md"
-      },
-      {
-        "title": "Images and logos",
-        "text": "images-and-logos.md"
-      },
-      {
-        "title": "Build the wheel",
-        "text": "build-the-wheel.md"
-      },
-      {
-        "title": "Install the wheel",
-        "text": "install-the-wheel.md"
-      },
-      {
-        "title": "Enable the integration in the Agent",
-        "text": "enable-the-integration.md"
-      },
-      {
-        "title": "Verify the activation",
-        "text": "verify-the-activation.md"
-      },
-      {
-        "title": "Set up a dashboard",
-        "text": "set-up-a-dashboard.md"
       }
     ],
     "intro": {
