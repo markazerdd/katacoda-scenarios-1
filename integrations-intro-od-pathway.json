@@ -12,8 +12,14 @@
       {
         "pathway_id" : "dadgoat/integrations-intro-od",
         "course_id": "integrations-intro-2",
-        "title": "Intro to Datadog Integrations",
-        "description": "An introduction to Datadog integrations"
+        "title": "Check Class and Unit Test",
+        "description": "Write a Check class and unit test."
+      },
+      {
+        "pathway_id" : "dadgoat/integrations-intro-od",
+        "course_id": "integrations-intro-3",
+        "title": "Integration Test",
+        "description": "Write an integration test for the integration."
       }
     ]
   }
