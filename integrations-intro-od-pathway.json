@@ -6,6 +6,12 @@
       {
         "pathway_id" : "dadgoat/integrations-intro-od",
         "course_id": "integrations-intro-1",
+        "title": "Environment Set-Up",
+        "description": "Set up your environment to begin work on a Datadog integration."
+      },
+      {
+        "pathway_id" : "dadgoat/integrations-intro-od",
+        "course_id": "integrations-intro-2",
         "title": "Intro to Datadog Integrations",
         "description": "An introduction to Datadog integrations"
       }

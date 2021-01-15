@@ -1,6 +1,6 @@
 {
-  "title": "Intro to Datadog Integrations",
-  "description": "An introduction to Datadog integrations",
+  "title": "Intro to Datadog Integrations - Environment Set-Up",
+  "description": "Set up your environment to begin work on a Datadog integration.",
   "difficulty": "Beginner",
   "time": "However much you need 🏖",
   "details": {
@@ -15,10 +15,6 @@
         "text": "welcome.md"
       },
       {
-        "title": "Install the Datadog Agent",
-        "text": "install-datadog-agent.md"
-      },
-      {
         "title": "Working directory and extras repo",
         "text": "dir-and-extras-repo.md"
       },
@@ -29,102 +25,6 @@
       {
         "title": "Install ddev",
         "text": "install-ddev.md"
-      },
-      {
-        "title": "ddev and scaffolding",
-        "text": "ddev-and-scaffolding.md"
-      },
-      {
-        "title": "The Check class",
-        "text": "the-check-class.md"
-      },
-      {
-        "title": "Implement check logic",
-        "text": "implement-check-logic.md"
-      },
-      {
-        "title": "Introducing tests",
-        "text": "introducing-tests.md"
-      },
-      {
-        "title": "A basic unit test",
-        "text": "basic-unit-test.md"
-      },
-      {
-        "title": "Run the basic unit test",
-        "text": "run-basic-unit-test.md"
-      },
-      {
-        "title": "Introducing integration tests",
-        "text": "introducing-integration-tests.md"
-      },
-      {
-        "title": "Docker config for a basic integration test",
-        "text": "docker-conf-integration-test.md"
-      },
-      {
-        "title": "A basic integration test",
-        "text": "basic-integration-test.md"
-      },
-      {
-        "title": "Add the basic integration test",
-        "text": "add-integration-test.md"
-      },
-      {
-        "title": "Run the basic integration test",
-        "text": "run-basic-integration-test.md"
-      },
-      {
-        "title": "Populate the README",
-        "text": "populate-the-readme.md"
-      },
-      {
-        "title": "Introducing configuration files",
-        "text": "introducing-configuration-files.md"
-      },
-      {
-        "title": "spec.yaml",
-        "text": "spec-yaml.md"
-      },
-      {
-        "title": "conf.yaml.example",
-        "text": "conf-yaml-example.md"
-      },
-      {
-        "title": "Populate manifest.json",
-        "text": "populate-manifest-json.md"
-      },
-      {
-        "title": "Populate service_checks.json",
-        "text": "populate-service-checks-json.md"
-      },
-      {
-        "title": "Introducing metadata.csv",
-        "text": "introducing-metadata-csv.md"
-      },
-      {
-        "title": "Images and logos",
-        "text": "images-and-logos.md"
-      },
-      {
-        "title": "Build the wheel",
-        "text": "build-the-wheel.md"
-      },
-      {
-        "title": "Install the wheel",
-        "text": "install-the-wheel.md"
-      },
-      {
-        "title": "Enable the integration in the Agent",
-        "text": "enable-the-integration.md"
-      },
-      {
-        "title": "Verify the activation",
-        "text": "verify-the-activation.md"
-      },
-      {
-        "title": "Set up a dashboard",
-        "text": "set-up-a-dashboard.md"
       }
     ],
     "intro": {
