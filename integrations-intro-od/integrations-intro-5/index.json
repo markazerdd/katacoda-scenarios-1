@@ -12,28 +12,32 @@
     },
     "steps": [
       {
-        "title": "Populate the README",
-        "text": "populate-the-readme.md"
+        "title": "Introducing metadata.csv",
+        "text": "introducing-metadata-csv.md"
       },
       {
-        "title": "Introducing configuration files",
-        "text": "introducing-configuration-files.md"
+        "title": "Images and logos",
+        "text": "images-and-logos.md"
       },
       {
-        "title": "spec.yaml",
-        "text": "spec-yaml.md"
+        "title": "Build the wheel",
+        "text": "build-the-wheel.md"
       },
       {
-        "title": "conf.yaml.example",
-        "text": "conf-yaml-example.md"
+        "title": "Install the wheel",
+        "text": "install-the-wheel.md"
       },
       {
-        "title": "Populate manifest.json",
-        "text": "populate-manifest-json.md"
+        "title": "Enable the integration in the Agent",
+        "text": "enable-the-integration.md"
       },
       {
-        "title": "Populate service_checks.json",
-        "text": "populate-service-checks-json.md"
+        "title": "Verify the activation",
+        "text": "verify-the-activation.md"
+      },
+      {
+        "title": "Set up a dashboard",
+        "text": "set-up-a-dashboard.md"
       }
     ],
     "intro": {

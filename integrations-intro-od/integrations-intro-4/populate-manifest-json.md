@@ -4,7 +4,7 @@ The [Datadog integrations documentation](https://docs.datadoghq.com/developers/i
 - `display_name`: A unique, human-readable name for the integration.
 - `short_description`: A short description of the integration.
 - `categories`: This corresponds to the [list of integration categories](https://docs.datadoghq.com/integrations/); in this case, let's classify it as `web`.
-- `public_title`: By convention, this is `Datadog-<display_name> Integration`.
+- `public_title`: By convention, this corresponds to the `display_name`.
 - `is_public`: Whether or not to display it on the public integration list; this should be `false` until the integration is ready for prime time.
 
 The next two are worth noting because they're _almost_ the same. They're both unique, machine-readable strings for the integration, but with one critical difference:
