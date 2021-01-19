@@ -1,6 +1,6 @@
 {
-  "title": "Intro to Datadog Integrations",
-  "description": "An introduction to Datadog integrations",
+  "title": "Intro to Datadog Integrations - Installing and Testing",
+  "description": "In this lab, you'll nstall your integration and make sure it is correctly reporting data to Datadog.",
   "difficulty": "Beginner",
   "time": "However much you need 🏖",
   "details": {
