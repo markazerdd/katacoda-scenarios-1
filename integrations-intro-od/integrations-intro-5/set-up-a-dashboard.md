@@ -3,7 +3,7 @@ With all of that out of the way, the last step is to actually visualise the resu
 When building the widget, your settings should look like this:
     ![check](assets/check.png)
 
-Make sure to set the "Check Name" in the first section and the "Reported By" in the third.
+Make sure to set the "Check name" in the first section and the "Reported by" in the third.
 
 After adding the check to your dashboard, it should be "OK". Remember, we are checking [https://example.com/](https://example.com/) for the text "Example Domain", which exists.
 
