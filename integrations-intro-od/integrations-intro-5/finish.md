@@ -3,4 +3,4 @@ If you're hungry for more (Datadog, that is), there's no reason to stop here. Re
  to start at [the beginning](https://docs.datadoghq.com/developers/), and if you need help, don't hesitate to attend our
  [Community Office Hours](https://docs.datadoghq.com/developers/office_hours/), held twice monthly.
 
-Thanks for playing!
+Thanks for taking our course!

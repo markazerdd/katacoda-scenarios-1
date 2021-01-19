@@ -1,5 +1,3 @@
-The previous lab focused on building a check and corresponding unit test. When this scenario starts, we have a script running to match the state of your environment at the end of that lab.
-
-Now you're going to make a an integration test for the check class.
+Now that we have the integration and supporting files, its time to build the integration and install it. When this scenario starts, we have a script running to match the state of your environment at the end of that lab.
 
 Let's get started!
