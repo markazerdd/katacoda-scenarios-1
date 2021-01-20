@@ -18,3 +18,5 @@ core        -> Work on 'integrations-core'
 extras      -> Work on 'integrations-extras'
 marketplace -> Work on 'marketplace'
 ```
+
+Run `grademe`{{execute}} before moving onto the next module to mark this module as complete.

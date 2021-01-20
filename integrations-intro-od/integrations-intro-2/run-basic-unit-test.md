@@ -21,3 +21,5 @@ Looks promising! Let's try it out:
 ```
 ddev test -fs awesome
 ```{{execute}}
+
+Run `grademe`{{execute}} before moving onto the next module to mark this module as complete.

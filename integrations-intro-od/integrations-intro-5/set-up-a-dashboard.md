@@ -17,3 +17,5 @@ systemctl restart datadog-agent
 You should see the check on the dashboard start failing shortly.
 
 And with that: congratulations! You just went from zero to a dashboard powered by a functioning integration. Well done! Now's a good time for cake. 🍰
+
+Run `grademe`{{execute}} before moving on to mark this course as complete.

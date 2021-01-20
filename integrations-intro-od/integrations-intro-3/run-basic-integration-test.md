@@ -19,3 +19,5 @@ ddev test -fs awesome
 ```{{execute}}
 
 And that's it: we now have a functional integration, complete with tests! We're done with code (for now), so let's move on to the rest of the bits and pieces that make up a complete integration…
+
+Run `grademe`{{execute}} before moving onto the next module to mark this module as complete.
