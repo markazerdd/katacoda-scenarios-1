@@ -12,7 +12,9 @@ The file explorer can be used to navigate the file system, create files and fold
 
 Files can also be opened in the editor via special links, for example: `hello_world`{{open}}.
 
-When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off. The init will be complete when you see `You're good to go!`. One of the things we are doing as part of the init is setting the version of Python to 3.x, which is required by our tooling.
+When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off. The init will be complete when you see `Provisioning Complete` and some Datadog account credentials. You won't be needing those until the last module of this course.
+
+Note that one of the things we are doing as part of the init is setting the version of Python to 3.x, which is required by our tooling.
 
 Oh, one last thing: whenever you see some `fixed-width text` with a ⏎ following it, that means you can click on the text to execute that command in the terminal. For example: `echo "Hello, World!"`{{execute}}
 
