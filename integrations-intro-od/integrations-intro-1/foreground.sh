@@ -1,2 +1,5 @@
+statuscheck tools
+statuscheck python3
+statuscheck complete
 clear
 prepenvironment
