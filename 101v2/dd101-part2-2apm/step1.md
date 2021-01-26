@@ -6,7 +6,7 @@
 
     To figure out which integrations are installed in this environment, run the Agent status command in the terminal using `kubectl exec $(kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep datadog) -- agent status`{{execute}}. This command figures out which pod is running the Datadog agent, and executes `agent status` on that pod.
 
-3. Open the application dashboard by clicking the second tab in the terminal window to the right. Sometimes this takes a minute to be available, so be patient.
+3. Open the application dashboard by clicking the second tab in the terminal window to the right. Sometimes this takes a minute to be available, so be patient. If it gives you an error, try opening it in a new tab with [this link](https://[[HOST_SUBDOMAIN2]]-3000-[[KATACODA_HOST]].environments.katacoda.com/)
 
 4. You can add a few pumps to the application by pressing the **Add Pump** button. To simulate usage, scroll down and click one of the **Generate API Traffic** buttons.
 
