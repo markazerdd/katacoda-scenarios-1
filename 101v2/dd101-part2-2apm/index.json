@@ -49,7 +49,7 @@
     "dashboards": [
       {
         "name": "App Dashboard",
-        "port": 30001
+        "href": "https://[[HOST2_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com/"
       }
     ]
   },
