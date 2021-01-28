@@ -24,6 +24,6 @@ statusupdate ddev
 unzip ~/awesome.zip -d .
 statusupdate awesome
 
-ln -s /etc/ /root/etc
+ln -s /etc/datadog-agent/conf.d/awesome.d/conf.yaml /root/conf.yaml
 
 statusupdate complete

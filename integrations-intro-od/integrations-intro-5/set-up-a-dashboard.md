@@ -7,7 +7,7 @@ Make sure to set the "Check name" in the first section and the "Reported by" in 
 
 After adding the check to your dashboard, it should be "OK". Remember, we are checking [https://example.com/](https://example.com/) for the text "Example Domain", which exists.
 
-You can try editing your config file to change the `search_string` or `url` options such that the check fails (like setting the `search_string` to "Datadog Integrations") `etc/datadog-agent/conf.d/awesome.d/conf.yaml`{{open}}
+You can try editing your config file to change the `search_string` or `url` options such that the check fails (like setting the `search_string` to "Datadog Integrations") `conf.yaml`{{open}}
 
 Make sure to restart the agent so the changes take effect:
 ```
