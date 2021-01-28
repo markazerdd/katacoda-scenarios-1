@@ -12,7 +12,7 @@ We've already talked about `conf.yaml.example`, but it's worth taking a look at 
 
 </details>
 
-Thinking back to `spec.yaml` (since these files are related):
+Thinking back to `spec.yaml`  - (you can find yours here `dd/integrations-extras/awesome/assets/configuration/spec.yaml`{{open}}):
 <details>
   <summary>What does uncommenting that final `template:` line do? (Go ahead and try it!) Note that you might need to close and reopen the  `conf.yaml.example` file to see the changes after re-running the `validate`</summary>
   

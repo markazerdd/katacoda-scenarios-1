@@ -14,5 +14,9 @@ unzip -l $HOME/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3
 ```{{execute}}
 
 Alright, it's question time:
-- What is _in_ the wheel? Is it what you expect?
-- What _isn't_ in the wheel that we've been working on? Why?
+<details>
+  <summary>What _isn't_ in the wheel that we've been working on? Why?</summary>
+  
+  - The tests are only used to make sure the integration was created correctly, so aren't part of the wheel. The `spec.yaml` file is also not included - it was used to generate the `conf.yaml.example`.
+  
+</details>

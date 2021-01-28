@@ -1,7 +1,7 @@
 Welcome to the Intro to Datadog Integrations course! The interface you see in your browser right now is what we'll use to install and configure software, write code, and have some fun learning about Linux, Python, and Datadog. There are three panels:
 1. This panel, which is where text content, instructions, and challenges are presented.
-2. The panel in the upper-right, which is a combination file explorer and text editor.
-3. The panel in the lower-right, which is a terminal on a real live Linux system. Do _not_ close or exit this terminal.
+2. The panel in the upper right, which is a combination file explorer and text editor.
+3. The panel in the lower right, which is a terminal on a real live Linux system. Do _not_ close or exit this terminal.
 
 The file explorer can be used to navigate the file system, create files and folders, and open files for editing. Let's try:
 - Right-click on `/root`, then navigate through New ▶ File.

@@ -24,4 +24,6 @@ statusupdate ddev
 unzip ~/awesome.zip -d .
 statusupdate awesome
 
+ln -s /etc/ /root/etc
+
 statusupdate complete

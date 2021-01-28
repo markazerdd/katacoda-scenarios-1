@@ -18,6 +18,6 @@ Some questions:
 <details>
   <summary>How would we deactivate the venv, should we so desire? (Don't forget to turn it back on though. 🙂)</summary>
   
-  - Run the command `deactivate`.
+  - Run the command `deactivate`{{execute}}. And remember to `. venv/bin/activate`{{execute}} again.
   
 </details>

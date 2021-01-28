@@ -48,7 +48,11 @@
   "environment": {
     "uilayout": "editor-terminal",
     "hideHiddenFiles": true,
-    "exclusionPatterns": ["/root/dd/integrations-extras/awesome/.tox/*", "/root/dd/integrations-extras/venv/*"]
+    "exclusionPatterns": [
+      "/root/dd/integrations-extras/awesome/.tox/*",
+      "/root/dd/integrations-extras/venv/*",
+      "/root/etc/*"
+    ]
   },
   "backend": {
     "imageid": "datadog-base-v1",
