@@ -51,7 +51,7 @@
     "exclusionPatterns": [
       "/root/dd/integrations-extras/awesome/.tox/*",
       "/root/dd/integrations-extras/venv/*",
-      "/root/etc/*"
+      "/root/etc/**"
     ]
   },
   "backend": {
