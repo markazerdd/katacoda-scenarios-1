@@ -1,1 +1,1 @@
-Now that we have our development environment all set up, we'll get started building our integration in the next module.
+Now that you have your development environment all set up, you'll get started building your integration in the next module.

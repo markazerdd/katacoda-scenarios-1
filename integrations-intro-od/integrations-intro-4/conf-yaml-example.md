@@ -1,8 +1,8 @@
-We've already talked about `conf.yaml.example`, but it's worth taking a look at the generated output to get a feel for how the `spec.yaml` file is used. Take a moment to look at `dd/integrations-extras/awesome/datadog_checks/awesome/data/conf.yaml.example`{{open}} with an eye to the following questions:
+You've already learned about `conf.yaml.example`, but it's worth taking a look at the generated output to get a feel for how the `spec.yaml` file is used. Take a moment to look at `dd/integrations-extras/awesome/datadog_checks/awesome/data/conf.yaml.example`{{open}} with an eye to the following questions:
 <details>
-  <summary>If we wanted to monitor _another_ URL, how would we do that?</summary>
+  <summary>If you wanted to monitor _another_ URL, how would you do that?</summary>
   
-  - We would need to add additional url options to the `spec.yaml` file.
+  - You would need to add additional url options to the `spec.yaml` file.
   
 </details>
 <details>
@@ -19,4 +19,4 @@ Thinking back to `spec.yaml`  - (you can find yours here `dd/integrations-extras
   - The `http` template provides additional options to make the connection such as authentication with username and passwords. This could be useful if an account was required for the desired domain.
 
 </details>
-If you want to learn more about the configuration specification itself, the [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/check_references/#configuration-file) goes into the details. For now, let's roll on!
+If you want to learn more about the configuration specification itself, the [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/check_references/#configuration-file) goes into the details. For now, go ahead and move on....

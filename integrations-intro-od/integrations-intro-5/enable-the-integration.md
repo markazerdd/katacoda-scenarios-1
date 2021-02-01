@@ -1,6 +1,6 @@
-You're almost there! All that's left to do now is to enable the integration within the Agent. In the Real World this would normally be done as part of some larger configuration management strategy, but that's a bit out of scope for this lab. There's also a [built-in web GUI](https://docs.datadoghq.com/agent/?tab=agentv6#gui) for most operating environments, but since we've spent so much time in the console already, let's keep the trend going. 😀
+You're almost there! All that's left to do now is to enable the integration within the Agent. In the Real World this would normally be done as part of some larger configuration management strategy, but that's a bit out of scope for this lab. There's also a [built-in web GUI](https://docs.datadoghq.com/agent/?tab=agentv6#gui) for most operating environments, but since you've spent so much time in the console already, keep the trend going. 😀
 
-Let's take a look at the example configuration:
+Take a look at the example configuration:
 ```
 cat /etc/datadog-agent/conf.d/awesome.d/conf.yaml.example | grep -v "^$\|#"
 ```{{execute}}
@@ -18,5 +18,5 @@ systemctl restart datadog-agent
 
 And make sure that worked:
 ```
-sudo datadog-agent status 
+datadog-agent status 
 ```{{execute}}

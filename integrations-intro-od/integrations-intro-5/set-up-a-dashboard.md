@@ -14,7 +14,7 @@ Make sure to restart the agent so the changes take effect:
 systemctl restart datadog-agent
 ```{{execute}}
 
-You should see the check on the dashboard start failing shortly.
+You should see the check on the dashboard start failing within 5 minutes.
 
 And with that: congratulations! You just went from zero to a dashboard powered by a functioning integration. Well done! Now's a good time for cake. 🍰
 

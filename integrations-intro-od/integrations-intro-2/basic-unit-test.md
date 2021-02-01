@@ -10,7 +10,7 @@ And, as before, here are some good questions to ask yourself about that code:
 <details>
   <summary>What does the line that starts with `@` mean?</summary>
   
-  - [This](https://docs.pytest.org/en/stable/example/markers.html) marks a block of tests so that we can specify them later when we want to run them. The "mark" in this case is `unit`. 
+  - [This](https://docs.pytest.org/en/stable/example/markers.html) marks a block of tests so that you can specify them later when you want to run them. The "mark" in this case is `unit`. 
   
 </details>
 <details>

@@ -1,4 +1,4 @@
-The moment of truth: let's build and run the test harness! We will use the development toolkit to help us with this:
+The moment of truth: build and run the test harness! You'll use the development toolkit to help with this:
 ```
 ddev test awesome
 ```{{execute}}
@@ -17,7 +17,7 @@ If you didn't, congratulations! If you _did_, it's very easy to fix; the tooling
 ddev test -h
 ```{{execute}}
 
-Looks promising! Let's try it out:
+Looks promising! Try it out:
 ```
 ddev test -fs awesome
 ```{{execute}}

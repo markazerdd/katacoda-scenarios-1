@@ -1,4 +1,4 @@
-Now we'll use the configuration elements defined in the previous step to actually implement an integration test. Head back to the [Datadog integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#integration-test) and look for the second part of `awesome/tests/test_awesome.py` (the one that starts with `@pytest.mark.integration`), then **add** it to the end of our local copy: `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}
+Now you'll use the configuration elements defined in the previous step to actually implement an integration test. Head back to the [Datadog integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#integration-test) and look for the second part of `awesome/tests/test_awesome.py` (the one that starts with `@pytest.mark.integration`), then **add** it to the end of your local copy: `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}
 
 In general, it's good policy to look before you leap, so here are some things to consider:
 <details>
@@ -28,6 +28,6 @@ In general, it's good policy to look before you leap, so here are some things to
 <details>
   <summary>Bonus: What is the `aggregator` parameter?</summary>
   
-  - This is the Datadog aggregator that collects the information from all the checks. So after performing each check with `c.check(instance)`, we assert the status we want exists in the aggregator with `aggregator.assert_service_check()`. 
+  - This is the Datadog aggregator that collects the information from all the checks. So after performing each check with `c.check(instance)`, you assert the status you want exists in the aggregator with `aggregator.assert_service_check()`. 
   
 </details>

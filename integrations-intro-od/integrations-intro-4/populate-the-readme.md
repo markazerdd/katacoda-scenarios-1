@@ -1,8 +1,8 @@
 Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on, the environment is being configured.
 
-The oldest, most venerable form of documentation in the tech world is the README, so let's start there. The scaffolding includes a basic `dd/integrations-extras/awesome/README.md`{{open}} that needs to be filled out. The sections are relatively self-explanatory and provide hints as to the _other_ configuration files that we'll be looking at momentarily.
+The oldest, most venerable form of documentation in the tech world is the README, so start there. The scaffolding includes a basic `dd/integrations-extras/awesome/README.md`{{open}} that needs to be filled out. The sections are relatively self-explanatory and provide hints as to the _other_ configuration files that you'll be looking at momentarily.
 
-For now, let's just pop a brief description of our integration into the **Overview** section:
+For now, let's just pop a brief description of the integration into the **Overview** section:
 > This integration queries a webpage and looks for a specific string.
 
-Before moving on, make a note of the **Service Checks** section—we'll circle back to that later on.
+Before moving on, make a note of the **Service Checks** section—you'll circle back to that later on.

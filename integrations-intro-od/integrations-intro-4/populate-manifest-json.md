@@ -1,6 +1,6 @@
 Next up is the `manifest.json` file, generally referred to simply as "the manifest". This file describes the operating parameters of the integration, and is used by Datadog to help position the integration within the greater ecosystem. Accordingly, the contents of this file are not generally used by the integration itself, which means it's not necessary for the integration to function; however, without a correctly populated manifest, a given integration cannot be included upstream.
 
-The [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=manifest#manifest-file) covers the contents of this file extensively. Let's take a look at the `dd/integrations-extras/awesome/manifest.json`{{open}}, which was created by the scaffolding. In particular, note:
+The [Datadog integrations documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=manifest#manifest-file) covers the contents of this file extensively. Take a look at the `dd/integrations-extras/awesome/manifest.json`{{open}}, which was created by the scaffolding. In particular, note:
 - `display_name`: A unique, human-readable name for the integration.
 - `short_description`: A short description of the integration.
 - `public_title`: By convention, this corresponds to the `display_name`.
@@ -11,4 +11,4 @@ The next two are worth noting because they're _almost_ the same. They're both un
 - `integration_id`: No underscores `_`, only dashes `-`.
 - `name`: No dashes `-`, only underscores `_` (and it must match the _directory name_ of the integration).
 
-Finally, note the reference to the `service_checks` asset, because that's where we're headed next!
+Finally, note the reference to the `service_checks` asset, because that's where you're headed next!

@@ -1,4 +1,4 @@
-Finally—it's time to write some code! We'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
+Finally—it's time to write some code! You'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. By default, it searches for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site!). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
 
 There's some great sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic) that you can just copy and paste into `awesome/datadog_checks/awesome/check.py` directly (replace the existing contents of that file with the sample code). There are two ways to edit files in this tutorial environment:
 - Using an editor such as `vim` or `nano` directly in the terminal.
@@ -8,7 +8,7 @@ Before moving on to the next step, take a moment to examine the code. Some quest
 <details>
   <summary>What's being imported?</summary>
   
-  - The [`requests` library](https://requests.readthedocs.io/en/master), used to make the HTTP request that we need for our Check.
+  - The [`requests` library](https://requests.readthedocs.io/en/master), used to make the HTTP request that you need for the Check.
   
 </details>
 <details>
@@ -21,7 +21,7 @@ Before moving on to the next step, take a moment to examine the code. Some quest
 <details>
   <summary>What data does the Check need to run? How are those variables being populated? What happens if they're missing?</summary>
   
-  - It needs a `url` to check and a `search_string` that we are going to check for on the page. If they are missing, an error is raised.
+  - It needs a `url` to check and a `search_string` that you are going to check for on the page. If they are missing, an error is raised.
   
 </details>
 <details>
