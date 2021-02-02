@@ -12,11 +12,11 @@ This is your first look at `ddev`, a [command-line tool](https://datadoghq.dev/i
 ddev config set repo extras
 ```{{execute}}
 
-Note that (outside of this training) if you are working on a marketplace integration, you can specify that too:
+Note that (outside of this training) if you are working on a marketplace integration, you can specify that too. Here are the values to use for `repo` for the corresponding repositories:
 ```
-core        -> Work on 'integrations-core'
-extras      -> Work on 'integrations-extras'
-marketplace -> Work on 'marketplace'
+core        -> integrations-core
+extras      -> integrations-extras
+marketplace -> marketplace
 ```
 
-Run `grademe`{{execute}} before moving onto the next module to mark this module as complete.
+One last thing, each lab has a step to ensure that the lab is marked "complete". Run `grademe`{{execute}} before moving onto the next lab to mark this lab as complete.

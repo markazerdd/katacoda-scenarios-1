@@ -1,4 +1,4 @@
-With all of that out of the way, the last step is to actually visualise the results of the check. Load up the Datadog web interface and navigate to [Dashboards](https://app.datadoghq.com/dashboard/lists#) and click `New Dashboard`, then set up a *screenboard* with a [Check Status widget](https://docs.datadoghq.com/graphing/widgets/check_status/#pagetitle) based on the `awesome.search` check. (`Edit Widgets` > drag `Check Status` onto the board)
+With all of that out of the way, the last step is to actually visualize the results of the check. Load up the Datadog web interface and navigate to [Dashboards](https://app.datadoghq.com/dashboard/lists#) and click `New Dashboard`, then set up a *screenboard* with a [Check Status widget](https://docs.datadoghq.com/graphing/widgets/check_status/#pagetitle) based on the `awesome.search` check. (`Edit Widgets` > drag `Check Status` onto the board)
 
 When building the widget, your settings should look like this:
     ![check](assets/check.png)

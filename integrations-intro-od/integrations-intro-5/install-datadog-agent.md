@@ -1,4 +1,4 @@
-Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on, the environment is being configured.
+The lab environment is being created. Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on.
 
 Now is the time to use the Datadog credentials you see displayed to access the account that was created for you. Visit [Datadog](https://app.datadoghq.com) and login with these now. If you ever need to be reminded of them, simply run `creds`{{execute}}
 

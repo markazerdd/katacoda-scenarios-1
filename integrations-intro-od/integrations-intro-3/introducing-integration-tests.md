@@ -1,4 +1,4 @@
-Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on, the environment is being configured.
+The lab environment is being created. Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on.
 
 While the unit tests helped validate discrete elements of code, they don't help understand whether the code actually does what it's supposed to do—that's where integration tests come in. (And, yes, it's a little confusing that you're about to write integration tests for an integration, but [naming things is hard](https://www.martinfowler.com/bliki/TwoHardThings.html).)
 

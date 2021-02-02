@@ -8,7 +8,7 @@ Before moving on to the next step, take a moment to examine the code. Some quest
 <details>
   <summary>What's being imported?</summary>
   
-  - The [`requests` library](https://requests.readthedocs.io/en/master), used to make the HTTP request that you need for the Check.
+  - The [`requests` library](https://requests.readthedocs.io/en/master), used to make the HTTP request that you need for the Check. From `datadog_checks.base`, `AgentCheck` is the class you are inheriting from and `ConfigurationError` let's you raise a Datadog configuration error.
   
 </details>
 <details>

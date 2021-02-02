@@ -4,13 +4,13 @@ And, as before, here are some good questions to ask yourself about that code:
 <details>
   <summary>What's being imported? What purpose might it serve?</summary>
   
-  - `pytest` is imported. [It](https://docs.pytest.org/en/stable/) is a testing framework for Python.
+  - `pytest` is a [common testing framework](https://docs.pytest.org/en/stable/) for Python.
   
 </details>
 <details>
   <summary>What does the line that starts with `@` mean?</summary>
   
-  - [This](https://docs.pytest.org/en/stable/example/markers.html) marks a block of tests so that you can specify them later when you want to run them. The "mark" in this case is `unit`. 
+  - The @ symbol is called a "decorator" in Python. These can be used lots of ways, but in this case, it ["marks"](https://docs.pytest.org/en/stable/example/markers.html) the subsequent code block as a unit test.
   
 </details>
 <details>

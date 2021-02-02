@@ -1,4 +1,4 @@
-Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on, the environment is being configured.
+The lab environment is being created. Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on.
 
 The oldest, most venerable form of documentation in the tech world is the README, so start there. The scaffolding includes a basic `dd/integrations-extras/awesome/README.md`{{open}} that needs to be filled out. The sections are relatively self-explanatory and provide hints as to the _other_ configuration files that you'll be looking at momentarily.
 

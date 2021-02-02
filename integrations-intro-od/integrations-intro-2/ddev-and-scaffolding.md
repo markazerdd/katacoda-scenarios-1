@@ -1,4 +1,4 @@
-Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on, the environment is being configured.
+The lab environment is being created. Wait until you see `Provisioning Complete` and some Datadog account credentials in the terminal before moving on.
 
 One of the developer toolkit features is the `create` command, which creates the basic file and path structure (or "scaffolding") necessary for a new integration. Try a dry-run using the `-n` flag, which won't write anything to disk:
 ```
@@ -20,7 +20,7 @@ Questions:
   
 </details>
 <details>
-  <summary>What happens if you _don't_ capitalise the Check name?</summary>
+  <summary>What happens if you _don't_ capitalize the Check name?</summary>
   
   - It will give a warning that you should be using a display name here. It expects the display name to contain a capital letter.
   
