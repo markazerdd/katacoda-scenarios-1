@@ -1,4 +1,4 @@
-The developer toolkit is comprehensive and includes a lot of functionality. You'll touch on a few of the many features as you go, but the first step is to install it:
+The developer toolkit is comprehensive and includes a lot of functionality. As the lab progresses, you'll learn some of its features. The first step is to install it:
 ```
 pip install "datadog-checks-dev[cli]"
 ```{{execute}}
@@ -7,7 +7,7 @@ That will take a moment.
 
 Once that's done, verify that it was correctly installed: `ddev --version`{{execute}}
 
-This is your first look at `ddev`, a [command-line tool](https://datadoghq.dev/integrations-core/ddev/cli/) that's part of the development toolkit. You'll be using it a fair amount going forward. Congratulations! You've just installed the same toolkit that the developers at Datadog use every day. By default it expects to work on the core integrations. You need to adjust that expectation using this syntax:
+This is your first look at `ddev`, a [command-line tool](https://datadoghq.dev/integrations-core/ddev/cli/) that's part of the development toolkit. You'll be using it a fair amount going forward. By default it expects to work on the core integrations. You need to adjust that expectation using this syntax:
 ```
 ddev config set repo extras
 ```{{execute}}

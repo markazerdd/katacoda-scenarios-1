@@ -5,4 +5,4 @@ You will work through:
 2. Cloning the Datadog integrations extras repo
 3. Installing the Datadog development tools
 
-When you're ready, get started!
+When you're ready, click "Start Scenario" to get started!

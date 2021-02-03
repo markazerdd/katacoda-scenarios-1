@@ -1,10 +1,10 @@
-Finally—it's time to write some code! You'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. By default, it searches for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site!). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
+In your integration, you'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. By default, it searches for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
 
-There's some great sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic) that you can just copy and paste into `awesome/datadog_checks/awesome/check.py` directly (replace the existing contents of that file with the sample code). There are two ways to edit files in this tutorial environment:
-- Using an editor such as `vim` or `nano` directly in the terminal.
-- Via the built-in editor in the upper-right of this window: `dd/integrations-extras/awesome/datadog_checks/awesome/check.py`{{open}}.
+There's sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic). This code is also provided in the lab environment here: `example_check.py`{{open}}. You can copy and paste into `awesome/datadog_checks/awesome/check.py`{{open}} directly (replace the existing contents of that file with the sample code).
 
-Before moving on to the next step, take a moment to examine the code. Some questions to ask yourself:
+Before moving on to the next step, take a moment to examine the code.
+
+Some questions to ask yourself:
 <details>
   <summary>What's being imported?</summary>
   
