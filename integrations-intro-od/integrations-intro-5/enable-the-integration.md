@@ -5,7 +5,7 @@ Take a look at the example configuration:
 cat /etc/datadog-agent/conf.d/awesome.d/conf.yaml.example | grep -v "^$\|#"
 ```{{execute}}
 
-You may recognize this as the same `conf.yaml.example` you looked at earlier. Now it's installed as part of the Agent. This configration is ready to go, so activate it by copying it to `conf.yaml` and changing the owner to `datadog-agent` (using `chown`):
+You may recognize this as the same `conf.yaml.example` you looked at earlier. Now it's installed as part of the Agent. This configuration is ready to go, so activate it by copying it to `conf.yaml` and changing the owner to `datadog-agent` (using `chown`):
 ```
 cp /etc/datadog-agent/conf.d/awesome.d/conf.yaml.example /etc/datadog-agent/conf.d/awesome.d/conf.yaml
 chown dd-agent /etc/datadog-agent/conf.d/awesome.d/conf.yaml
@@ -14,9 +14,4 @@ chown dd-agent /etc/datadog-agent/conf.d/awesome.d/conf.yaml
 The last thing to do now is to restart the Agent so that it picks up the new configuration file:
 ```
 systemctl restart datadog-agent
-```{{execute}}
-
-And make sure that worked:
-```
-datadog-agent status 
 ```{{execute}}

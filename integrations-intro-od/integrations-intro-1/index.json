@@ -2,7 +2,7 @@
   "title": "Intro to Datadog Integrations - Environment Set-Up",
   "description": "Set up your environment to begin work on a Datadog integration.",
   "difficulty": "Beginner",
-  "time": "However much you need 🏖",
+  "time": "20 minutes",
   "details": {
     "assets": {
       "host01": [

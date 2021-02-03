@@ -3,7 +3,7 @@ The developer toolkit is comprehensive and includes a lot of functionality. You'
 pip install "datadog-checks-dev[cli]"
 ```{{execute}}
 
-That will take a moment. Don't worry if you see some red lines fly by—unless you get some sort of catastrophic error, it's probably fine. 😉
+That will take a moment.
 
 Once that's done, verify that it was correctly installed: `ddev --version`{{execute}}
 

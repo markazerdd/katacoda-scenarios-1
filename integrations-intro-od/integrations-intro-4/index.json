@@ -2,7 +2,7 @@
   "title": "Intro to Datadog Integrations - Supporting Files",
   "description": "Add the required files for an integration",
   "difficulty": "Beginner",
-  "time": "However much you need 🏖",
+  "time": "20 minutes",
   "details": {
     "assets": {
       "host01": [

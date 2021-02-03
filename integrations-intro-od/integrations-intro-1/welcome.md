@@ -1,24 +1,28 @@
-Welcome to the Intro to Datadog Integrations course! The interface you see in your browser right now is what you'll use to install and configure software, write code, and have some fun learning about Linux, Python, and Datadog. There are three panels:
-1. This panel, which is where text content, instructions, and challenges are presented.
-2. The panel in the upper right, which is a combination file explorer and text editor.
-3. The panel in the lower right, which is a terminal on a real live Linux system. Do _not_ close or exit this terminal.
+Welcome to the Intro to Datadog Integrations course. The interface you see in your browser right now is what you'll use to install and configure software, and ultimately write a Datadog Integration.
 
-The file explorer can be used to navigate the file system, create files and folders, and open files for editing. Try:
+There are three panels:
+
+**Terminal**
+The terminal is located in the lower right and is a terminal on a Linux instance. When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off in the terminal. The init will be complete when you see `Provisioning Complete` and some Datadog account credentials. You don't need to use these until the last module of this course. They will be provided again for you when you need them.
+
+Note that one of the things done during init is setting the version of Python to 3.x, which is required by the tooling.
+
+Once the initialization is complete, try running a command by typing `echo "Hello world"` in the terminal, 
+
+**File Explorer**
+The file explorer is in the upper right. It can be used to navigate the file system, create files and folders, and open files for editing. Try:
 - Right-click on `/root`, then navigate through New ▶ File.
 - Name the file `hello_world`.
 - Click on `hello_world` to open the file in the editor (feel free to type something).
 - Close the file by clicking on the little `x` in the tab above the editor panel.
   - Note that there is no "save" button - the editor autosaves frequently.
 
-Files can also be opened in the editor via special links, for example: `hello_world`{{open}}.
+**Narrative**
+The narrative panel is where you are reading this text. There is some specific functionality to be aware of:
 
-When this course was loaded, a small series of initialization actions (generally referred to as "init") kicked off. The init will be complete when you see `Provisioning Complete` and some Datadog account credentials. You don't need to use these until the last module of this course. They will be provided again for you when you need them.
+Files can be opened in the editor via special links, for example: `hello_world`{{open}}.
 
-Note that one of the things done during init is setting the version of Python to 3.x, which is required by the tooling.
-
-Oh, one last thing: whenever you see some `fixed-width text` with a ⏎ following it, that means you can click on the text to execute that command in the terminal. For example: `echo "Hello, World!"`{{execute}}
-
-And while this has already been said, it's very important: do _not_ close or exit from the terminal. You'll have to start all over again if you do.
+Commands can be clicked on and they will be executed in the terminal. For example: `echo "Hello, World!"`{{execute}}
 
 <details>
   <summary>Sometimes, the narrative will have a question. Try to answer it yourself before revealing the answer by clicking the triangle arrow to the left of this statement.</summary>
@@ -27,6 +31,4 @@ And while this has already been said, it's very important: do _not_ close or exi
   
 </details>
 
-Your first challenges:
-- Run a command directly in the terminal (try `echo "hi"`).
-- Move on to the next step.
+Move onto the next step once you are comfortable with the learning environment.

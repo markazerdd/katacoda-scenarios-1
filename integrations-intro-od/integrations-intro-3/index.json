@@ -2,7 +2,7 @@
   "title": "Intro to Datadog Integrations - Integration Test",
   "description": "Make an integration test for the integration.",
   "difficulty": "Beginner",
-  "time": "However much you need 🏖",
+  "time": "30 minutes",
   "details": {
     "assets": {
       "host01": [
