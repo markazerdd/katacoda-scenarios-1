@@ -1,4 +1,4 @@
-Now that you have an installable artefact, you can go ahead and install it via the Agent directly:
+Now that you have an installable artifact, you can go ahead and install it via the Agent directly:
 ```
 cp $HOME/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl /tmp
 sudo -u dd-agent datadog-agent integration install -w /tmp/datadog_awesome-0.0.1-py2.py3-none-any.whl
