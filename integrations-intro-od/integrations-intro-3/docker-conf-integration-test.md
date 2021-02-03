@@ -1,14 +1,16 @@
-There are lots of ways to accomplish our goal. One popular technique is to use Docker to spin up a very small, very lightweight environment that meets the needs of the testing scenario. In this case, you'll use it to set up and run a web server, query that server for a page, and then analyze the result according to our check logic.
+One popular technology to set up a local server to test against is Docker. You'll use Docker to spin up a very small, very lightweight environment that meets the needs of the testing scenario. In this case, you'll use it to set up and run a web server, query that server for a page, and then analyze the result according to our check logic.
 
-You'll start by setting up a Docker configuration. Head back to the Datadog integration documentation and check out [the docker-compose.yml file](https://docs.datadoghq.com/developers/integrations/new_check_howto/#building-an-integration-test). Unlike the other files you've worked with so far, this one doesn't exist yet, so you need to create it first:
+You'll start by setting up a Docker configuration. Head back to the Datadog integration documentation and check out [the docker-compose.yml file](https://docs.datadoghq.com/developers/integrations/new_check_howto/#building-an-integration-test). This code is also provided in the lab environment here: `example_docker-compose.yml`{{open}}.
+
+Unlike the other files you've worked with so far, this one doesn't exist yet, so you need to create it first:
 ```
 cd $HOME/dd/integrations-extras/
 touch awesome/tests/docker-compose.yml
 ```{{execute}}
 
-Now just copy and paste to `dd/integrations-extras/awesome/tests/docker-compose.yml`{{open}}!
+Now copy and paste the code to `dd/integrations-extras/awesome/tests/docker-compose.yml`{{open}}.
 
-As always, it's good to ask some questions:
+Some questions based on looking at the Docker compose file:
 <details>
   <summary>Which web server software will be installed?</summary>
   

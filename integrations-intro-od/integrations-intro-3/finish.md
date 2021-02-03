@@ -1,1 +1,1 @@
-Great! Now you have a unit and integration test suite required for getting the integration accepted into the community repository. Next you'll learn about some of the other required supporting files and information.
+Now you have a unit and integration test suite required for getting the integration accepted into the community repository. Next you'll learn about some of the other required supporting files and information.

@@ -1,30 +1,26 @@
-With Docker out of the way, you can concentrate on the test itself. There are two separate but related components to consider: the _configuration_ of the test, and the _instantiation_ of that configuration (i.e. actually running the test).
+With a testable fixture, you'll now work on the test itself. There are two separate but related components to consider: the _configuration_ of the test, and the _instantiation_ of that configuration (i.e. actually running the test).
 
-You'll start with the configuration. Thinking back to the test-related files from the scaffolding, do you recall the `conftest.py` file? That's a great spot to put configuration for tests. 😀
+You'll start with the configuration. Thinking back to the test-related files from the scaffolding, you may recall `conftest.py`. This is where you'll put the configuration for the tests.
 
-You know the drill by now: look in the [Datadog integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#building-an-integration-test) for `awesome/tests/conftest.py`, then use your copy and paste super-powers to replace the contents of the file `dd/integrations-extras/awesome/tests/conftest.py`{{open}}.
+A sample is provided in the [Datadog integration documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#building-an-integration-test) (look for `awesome/tests/conftest.py`). This code is also provided in the lab environment here: `example_conftest.py`{{open}}. Copy this code and paste to replace the contents of the file `dd/integrations-extras/awesome/tests/conftest.py`{{open}}.
 
-Introspection is a super-power, too. So here are some questions to ponder:
+This code spins up the Docker instance you just defined and then provides the environment to the tests.
+
+Take a look at the code you pasted in and see if you can answer these questions:
 <details>
   <summary>What's being imported? What is their purpose?</summary>
   
-  - `os` allows us to access the docker file on this machine. `pytest` was also imported for the unit test - this is the test framework.
+  - `os` allows you to access the docker file on this machine. `pytest` was also imported for the unit test - this is the test framework.
   
 </details>
 <details>
   <summary>What global variables are being declared, and why?</summary>
   
-  - `URL`, `SEARCH_STRING`, and `INSTANCE`. These allow us to use the same `INSTANCE` for testing.
+  - `URL`, `SEARCH_STRING`, and `INSTANCE`. These allow you to use the same `INSTANCE` for testing.
   
 </details>
 <details>
-  <summary>How useful are in-line comments in code?</summary>
-  
-  - _very_ :-)
-  
-</details>
-<details>
-  <summary>Extra credit: why is `yield` used in `dd_environment()` instead of `return`?</summary>
+  <summary>Why is `yield` used in `dd_environment()` instead of `return`?</summary>
   
   - `yield` maintains the local state so that if `dd_environment()` is called more than once, you won't be spinning up a new environment each time.
   

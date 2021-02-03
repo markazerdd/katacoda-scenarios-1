@@ -1,4 +1,4 @@
-With all of that out of the way, the last step is to actually visualize the results of the check. Load up the Datadog web interface and navigate to [Dashboards](https://app.datadoghq.com/dashboard/lists#) and click `New Dashboard`, then set up a *screenboard* with a [Check Status widget](https://docs.datadoghq.com/graphing/widgets/check_status/#pagetitle) based on the `awesome.search` check. (`Edit Widgets` > drag `Check Status` onto the board)
+The last step is to actually visualize the results of the check. Open the Datadog web interface, navigate to [Dashboards](https://app.datadoghq.com/dashboard/lists#) and click `New Dashboard`, then set up a *screenboard* with a [Check Status widget](https://docs.datadoghq.com/graphing/widgets/check_status/#pagetitle) based on the `awesome.search` check. (`Edit Widgets` > drag `Check Status` onto the board)
 
 When building the widget, your settings should look like this:
     ![check](assets/check.png)
@@ -16,6 +16,6 @@ systemctl restart datadog-agent
 
 You should see the check on the dashboard start failing within 5 minutes.
 
-And with that: congratulations! You just went from zero to a dashboard powered by a functioning integration. Well done! Now's a good time for cake. 🍰
+You now have your integration successfully reporting to Datadog.
 
-Run `grademe`{{execute}} before moving on to mark this course as complete.
+Run `grademe`{{execute}} to mark this course as complete before moving on to the course wrap-up.

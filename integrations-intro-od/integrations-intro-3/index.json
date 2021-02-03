@@ -7,7 +7,9 @@
     "assets": {
       "host01": [
         { "file": ".vimrc", "target": "~/" },
-        { "file": "awesome.zip", "target": "~/" }
+        { "file": "awesome.zip", "target": "~/" },
+        { "file": "example_docker-compose.yml", "target": "~/" },
+        { "file": "example_conftest.py", "target": "~/" }
       ]
     },
     "steps": [

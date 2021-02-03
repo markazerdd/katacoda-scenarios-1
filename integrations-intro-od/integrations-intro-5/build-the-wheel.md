@@ -1,4 +1,4 @@
-Next stop: the wheel. Wheels are a Python-native packaging format. If you've ever used RPM or DEB files, for example, you've encountered a packaging format—wheels are quite similar. And, like all packaging formats, you can tumble down the rabbit hole fairly easily. Luckily, the `ddev` tooling takes care of the heavy lifting:
+"Wheels" are a Python-native packaging format. If you've ever used RPM or DEB files, for example, you've encountered a packaging format — wheels are quite similar. The `ddev` tooling will build the wheel for you:
 ```
 ddev release build awesome
 ```{{execute}}
@@ -8,12 +8,12 @@ The output contains an important line: the path where the wheel file that was bu
 ls -l $HOME/dd/integrations-extras/awesome/dist
 ```{{execute}}
 
-So, what's in that wheel anyway? It's a package, so there should be a way to see the files that are inside it, right? Yes! In fact, it's just a ZIP file with a different extension, so take a closer look:
+If you are curious what is in the wheel, it's just a ZIP file with a different extension. You can `unzip` it to take a closer look:
 ```
 unzip -l $HOME/dd/integrations-extras/awesome/dist/datadog_awesome-0.0.1-py2.py3-none-any.whl
 ```{{execute}}
 
-Alright, it's question time:
+A question to consider:
 <details>
   <summary>What _isn't_ in the wheel that you've been working on? Why?</summary>
   

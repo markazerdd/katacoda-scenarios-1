@@ -11,4 +11,4 @@ The next two are worth noting because they're _almost_ the same. They're both un
 - `integration_id`: No underscores `_`, only dashes `-`.
 - `name`: No dashes `-`, only underscores `_` (and it must match the _directory name_ of the integration).
 
-Finally, note the reference to the `service_checks` asset, because that's where you're headed next!
+Finally, note the reference to the `service_checks` asset, you'll take a look at that next.

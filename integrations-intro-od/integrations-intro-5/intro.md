@@ -2,4 +2,4 @@ Now that you have the integration and supporting files, its time to build the in
 
 Before installing you're integration, you’re going to install the Datadog Agent on the server. You’ll also set up a simple dashboard in Datadog and make sure that the integration is working correctly.
 
-When you're ready, get started!
+When you're ready, click "Start Scenario" to get started!

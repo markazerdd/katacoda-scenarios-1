@@ -2,4 +2,4 @@ The previous labs focused on building a check and testing suite. When this scena
 
 You’re almost ready to test out the integration. But first, you're going to add the associated files and information required for getting the integration accepted into the repository.
 
-Go ahead and get started!
+When you're ready, click "Start Scenario" to get started!

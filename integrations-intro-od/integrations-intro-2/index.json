@@ -7,7 +7,7 @@
     "assets": {
       "host01": [
         { "file": ".vimrc", "target": "~/" },
-        { "file": "example_check.py", "target": "~/" }
+        { "file": "example_check.py", "target": "~/" },
         { "file": "example_test_awesome.py", "target": "~/" }
       ]
     },
