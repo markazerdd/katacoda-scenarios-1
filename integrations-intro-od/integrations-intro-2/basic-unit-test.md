@@ -1,6 +1,10 @@
-As with the check logic, there's some great sample code for the unit tests in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#writing-tests). Go ahead and paste that code into `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}, replacing the existing code in that file.
+As with the check logic, there's sample code for the unit tests in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#writing-tests). This code is also provided in the lab environment here: `example_test_awesome.py`{{open}}. Paste that code into `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}, replacing the existing code in that file.
 
-And, as before, here are some good questions to ask yourself about that code:
+Take a moment to review what the code is doing. The test (`test_config`) is testing that the different configuration cases are handled appropriately. The first test ensures that a `ConfigurationError` is raised when an empty configuration is provided. The second and third tests ensure that the same happens when only the `url` or only the `search_string` is present.
+
+Lastly, it tests the check with a correct configuration, which should not raise any kind of error.
+
+And, as before, here are some questions to ask yourself about that code:
 <details>
   <summary>What's being imported? What purpose might it serve?</summary>
   

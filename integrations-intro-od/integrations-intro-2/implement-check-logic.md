@@ -1,8 +1,18 @@
 In your integration, you'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. By default, it searches for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
 
-There's sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic). This code is also provided in the lab environment here: `example_check.py`{{open}}. You can copy and paste into `awesome/datadog_checks/awesome/check.py`{{open}} directly (replace the existing contents of that file with the sample code).
+There's sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic). This code is also provided in the lab environment here: `example_check.py`{{open}}. You can copy and paste into `dd/integrations-extras/awesome/datadog_checks/awesome/check.py`{{open}} directly (replace the existing contents of that file with the sample code).
 
 Before moving on to the next step, take a moment to examine the code.
+
+The `check` method is where the main logic exists and is called by the Datadog Agent to evaluate this check. This check needs two parameters to evaluate:
+- `url` - the URL of the page being checked
+- `search_string` - the string being searched for on the page
+
+You will be specifying these parameters as part of the default configuration in a later step.
+
+A `ConfigurationError` is raised if one of these required parameters is missing.
+
+The bottom part of the file contains the different statuses mentioned above. The method attempts to access the `url` and reports a `CRITICAL` status if it cannot. If the page is accessible, it searches for `search_string` and reports `OK` or `WARNING` depending on if it exists in the page or not.
 
 Some questions to ask yourself:
 <details>
