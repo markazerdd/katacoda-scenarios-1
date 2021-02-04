@@ -9,7 +9,7 @@
         { "file": ".vimrc", "target": "~/" },
         { "file": "awesome.zip", "target": "~/" },
         { "file": "example_spec.yaml", "target": "~/" },
-        { "file": "example_service_checks.yaml", "target": "~/" }
+        { "file": "example_service_checks.json", "target": "~/" }
       ]
     },
     "steps": [
