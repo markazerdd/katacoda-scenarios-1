@@ -4,9 +4,11 @@ All integrations come with a `conf.yaml.example` file that provides a starting p
 
 Furthermore, they all follow a very specific syntax covering not only the keywords and types, but the _comments_ as well. The syntax is pretty strict. Luckily you don't need to worry about doing it by hand, as it's generated from a template using the `ddev` tooling. This is where `spec.yaml` comes into play.
 
-The `spec.yaml` file defines the contents of the example configuration and is used not only by the local tooling, but by the upstream Datadog CI/CD system as well. The configuration is defined in `spec.yaml`, and used to automatically create `conf.yaml`. This ensures `conf.yaml` follows standards and is consistent with other configuration files.
+The `spec.yaml` file defines the contents of the example configuration and is used not only by the local tooling, but by the upstream Datadog CI/CD system as well. The configuration is defined in `spec.yaml`, and used to automatically create `conf.yaml`. This ensures the resulting `conf.yaml` follows standards and is consistent with other configuration files.
 
-An example [Configuration template](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#create-the-check-assets) is provided in the Datadog docs. This code is also provided in the lab environment here: `example_spec.yml`{{open}}. Copy and paste this example into `dd/integrations-extras/awesome/assets/configuration/spec.yaml`{{open}} (replacing what is in the file already).
+An example [Configuration template](https://docs.datadoghq.com/developers/integrations/new_check_howto/?tab=configurationtemplate#create-the-check-assets) is provided in the Datadog docs. This code is also provided in the lab environment here: `example_spec.yaml`{{open}}. Copy and paste this example into `dd/integrations-extras/awesome/assets/configuration/spec.yaml`{{open}} (replacing what is in the file already).
+
+If you examine what you pasted in, you'll see the `init_config` section and the `instances` section where the `options` are defined that get passed in to your check (`url` and `search_string`).
 
 Now, you can generate the example configuration via `ddev validate config --sync awesome`{{execute}}.
 
