@@ -8,7 +8,7 @@ This takes a little longer than the unit test since it needs to spin up a Docker
 ERROR:   style: commands failed
 ```
 
-If you didn't, great! If you _did_, it's very easy to fix; the tooling has a code formatter (`-fs`) that can fix it for you:
+If you didn't, great! If you _did_, it's usually easy to fix; the tooling has a code formatter (`-fs`) that can fix it for you:
 ```
 ddev test -fs awesome
 ```{{execute}}

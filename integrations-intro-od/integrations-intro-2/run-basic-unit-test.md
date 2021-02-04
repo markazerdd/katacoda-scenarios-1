@@ -12,7 +12,7 @@ If you fail the style checker, you'll see something like this:
 ERROR:   style: commands failed
 ```
 
-If you didn't, nice work! If you _did_, it's very easy to fix. The tooling provides a "code style formatter", using the `-fs` flag:
+If you didn't, great! If you _did_, it's usually easy to fix. The tooling provides a "code style formatter", using the `-fs` flag:
 ```
 ddev test -fs awesome
 ```{{execute}}

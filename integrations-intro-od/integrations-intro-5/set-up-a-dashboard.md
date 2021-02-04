@@ -14,7 +14,7 @@ Make sure to restart the agent so the changes take effect:
 systemctl restart datadog-agent
 ```{{execute}}
 
-You should see the check on the dashboard start failing within 5 minutes.
+You should see the check on the dashboard  ("WARN") within 5 minutes.
 
 You now have your integration successfully reporting to Datadog.
 

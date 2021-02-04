@@ -1,4 +1,4 @@
-As with the check logic, there's sample code for the unit tests in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#writing-tests). This code is also provided in the lab environment here: `example_test_awesome.py`{{open}}. Paste that code into `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}, replacing the existing code in that file.
+As with the check logic, there's sample code for the unit tests in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#writing-tests). This code is also provided in the lab environment here: `example_test_awesome.py`{{open}}. Copy and paste that code into `dd/integrations-extras/awesome/tests/test_awesome.py`{{open}}, replacing the existing code in that file.
 
 Take a moment to review what the code is doing. The test (`test_config`) is testing that the different configuration cases are handled appropriately. The first test ensures that a `ConfigurationError` is raised when an empty configuration is provided. The second and third tests ensure that the same happens when only the `url` or only the `search_string` is present.
 
@@ -8,7 +8,7 @@ And, as before, here are some questions to ask yourself about that code:
 <details>
   <summary>What's being imported? What purpose might it serve?</summary>
   
-  - `pytest` is a [common testing framework](https://docs.pytest.org/en/stable/) for Python.
+  - `pytest` is a [common testing framework](https://docs.pytest.org/en/stable/) for Python. `AwesomeCheck` is the integration you are writing and `ConfigurationError` is the type of error you want to raise when something is wrong with the integration configuration.
   
 </details>
 <details>

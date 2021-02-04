@@ -9,7 +9,8 @@
         { "file": ".vimrc", "target": "~/" },
         { "file": "awesome.zip", "target": "~/" },
         { "file": "example_docker-compose.yml", "target": "~/" },
-        { "file": "example_conftest.py", "target": "~/" }
+        { "file": "example_conftest.py", "target": "~/" },
+        { "file": "example_second_part_test_awesome.py", "target": "~/" }
       ]
     },
     "steps": [

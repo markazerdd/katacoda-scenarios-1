@@ -10,7 +10,7 @@ Take a look at the code you pasted in and see if you can answer these questions:
 <details>
   <summary>What's being imported? What is their purpose?</summary>
   
-  - `os` allows you to access the docker file on this machine. `pytest` was also imported for the unit test - this is the test framework.
+  - `os` allows you to access the docker file on this machine. `pytest` was also imported for the unit test - this is the test framework. `docker_run` is a helper to run the Docker, `get_docker_hostname` is a helper to get the Docker hostname, and `get_here` is a helper to get the current file location.
   
 </details>
 <details>

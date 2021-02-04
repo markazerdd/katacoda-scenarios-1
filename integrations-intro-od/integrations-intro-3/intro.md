@@ -1,4 +1,4 @@
-The previous lab focused on building a check and corresponding unit test. When this scenario starts, a script runs to match the state of your environment at the end of that lab.
+The previous lab focused on building a check and corresponding unit test. When this lab starts, a script runs to match the state of your environment at the end of that lab.
 
 Now that you have an integration and a unit test, the next step is to create an integration test ("integration" here in the sense of testing the software as a whole, not in the sense of a "Datadog integration").
 
