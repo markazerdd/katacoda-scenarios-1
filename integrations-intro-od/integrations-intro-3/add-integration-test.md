@@ -8,7 +8,7 @@ See if you can answer these questions about the file:
 <details>
   <summary>This is an integration test — how is that specified?</summary>
   
-  - From the pytest "mark"/.
+  - From the pytest `mark`.
   
 </details>
 <details>
@@ -26,7 +26,7 @@ See if you can answer these questions about the file:
 <details>
   <summary>Where does the `instance` parameter come from?</summary>
   
-  - This is `yield`ed from `ddenvironment`.
+  - This is `yield`ed from `dd_environment`.
   
 </details>
 <details>

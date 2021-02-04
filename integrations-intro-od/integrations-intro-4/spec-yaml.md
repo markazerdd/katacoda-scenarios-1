@@ -1,4 +1,8 @@
-All integrations come with a `conf.yaml.example` file that provides a starting point for actually setting up and using the integration. Depending on the nature of the integration this file can be complex. However, every `conf.yaml` has some things in common. For example, they all contain an `init_config` block and an `instance` block. Furthermore, they all follow a very specific syntax covering not only the keywords and types, but the _comments_ as well. The syntax is pretty strict. Luckily you don't need to worry about doing it by hand, as it's generated from a template using the `ddev` tooling. This is where `spec.yaml` comes into play.
+All integrations come with a `conf.yaml.example` file that provides a starting point for actually setting up and using the integration. Depending on the nature of the integration this file can be complex. However, every `conf.yaml` has some things in common. For example, they all contain two main blocks:
+- The `init_config` block is where you put any common configuration information, for example, the name of the type of service the integration supports. 
+- The `instances` block is where you can configure each instance of the integration you would like to run.
+
+Furthermore, they all follow a very specific syntax covering not only the keywords and types, but the _comments_ as well. The syntax is pretty strict. Luckily you don't need to worry about doing it by hand, as it's generated from a template using the `ddev` tooling. This is where `spec.yaml` comes into play.
 
 The `spec.yaml` file defines the contents of the example configuration and is used not only by the local tooling, but by the upstream Datadog CI/CD system as well. The configuration is defined in `spec.yaml`, and used to automatically create `conf.yaml`. This ensures `conf.yaml` follows standards and is consistent with other configuration files.
 

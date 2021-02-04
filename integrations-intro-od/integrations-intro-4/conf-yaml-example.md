@@ -2,7 +2,7 @@ You've already learned about `conf.yaml.example`, but it's worth taking a look a
 <details>
   <summary>If you wanted to monitor _another_ URL, how would you do that?</summary>
   
-  - You would need to add additional url options to the `spec.yaml` file.
+  - You would add an additional entry under `instances` in the `conf.yaml` file.
   
 </details>
 <details>

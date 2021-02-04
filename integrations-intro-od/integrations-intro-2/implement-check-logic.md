@@ -1,4 +1,4 @@
-In your integration, you'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. By default, it searches for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
+In your integration, you'll create a [Service Check](https://docs.datadoghq.com/developers/service_checks/#overview) named `awesome.search` that searches for a string on a web page. The name comes from the fact that the name of your integration is "awesome", and you are creating a check named "search". By default, the check will be set up to search for "Example Domain" on [http://example.org/](http://example.org/)(which is a real site). It will result in `OK` if the string is present, `WARNING` if the page is accessible but the string was not found, and `CRITICAL` if the page is inaccessible.
 
 There's sample code available in the [Datadog documentation](https://docs.datadoghq.com/developers/integrations/new_check_howto/#implement-check-logic). This code is also provided in the lab environment here: `example_check.py`{{open}}. You can copy and paste into `dd/integrations-extras/awesome/datadog_checks/awesome/check.py`{{open}} directly (replace the existing contents of that file with the sample code).
 
@@ -8,7 +8,7 @@ The `check` method is where the main logic exists and is called by the Datadog A
 - `url` - the URL of the page being checked
 - `search_string` - the string being searched for on the page
 
-You will be specifying these parameters as part of the default configuration in a later step.
+The parameters are accessed by calling `instance.get('parameter_name_here')`. You will be specifying these parameters as part of the default configuration in a later step.
 
 A `ConfigurationError` is raised if one of these required parameters is missing.
 
