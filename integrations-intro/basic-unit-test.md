@@ -2,5 +2,5 @@ As with the check logic, there's some great sample code for the unit tests in th
 
 And, as before, here are some good questions to ask yourself about that code:
 - What's being imported? What's purpose might it serve?
-- What does the line that starts with `@` mean?
+- What does the line that starts with `@` do?
 - What elements are being tested, and what happens if they fail?
