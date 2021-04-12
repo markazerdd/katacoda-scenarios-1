@@ -45,7 +45,7 @@
     ]
   },
   "backend": {
-    "imageid": "datadog-kubernetes-cluster-running",
+    "imageid": "kubernetes-master-ubuntu1604-1-16-running",
     "reuseConnection": "false"
   }
 }
