@@ -9,12 +9,12 @@ Welcome to the first section of the Introduction to Datadog course.
 
     `touch editor/newfile.txt`{{execute}}
 
-1. Now login to your <a href="https://app.datadoghq.com" target="_datadog">Datadog account</a>. You should have received an email letting you know about the organization we have created for you. Again, we use a separate org to ensure that you don't pollute your production environment.
+1. Now login to your <a href="https://app.datadoghq.com" target="_datadog">Datadog account</a>. On the right side in the terminal you should see login information for the account we created for you. Later if you forget the login information, run `creds`{{execute}} and you will see the information again.
 1. Take a look around. We will be trying out many of the sections during this training.
-1. Now verify that you are in the right organization. Visit <a href="https://app.datadoghq.com/account/settings#api" target="_datadog">the API Keys section</a>. Expand API Keys and hover over the purple rectangle to reveal the API key we have created for you.
+1. Now verify that you are in the right organization. Visit <a href="https://app.datadoghq.com/account/settings#api" target="_datadog">the API Keys section</a>, which you can find in the Global Navigation under **Integrations > APIs**. Expand API Keys and hover over the purple rectangle to reveal the API key we have created for you.
 1. In the Training Lab terminal, run the command `echo $DD_API_KEY`{{execute}} to see the API key environment variable. Verify that this is the same API key. You don't have to memorize the entire key. Just making sure that the first and last couple of characters are the same should be good enough to ensure a match.  
 
     _Note: API and Application keys are different._
 
-    If this is not the same API key that you saw in your Datadog account, you may have been in the wrong organization. You can switch orgainizaitons by clicking on the Account menu in the Datadog nav bar and selecting the new organization we created for you.
+    If this is not the same API key that you saw in your Datadog account, you may have been in the wrong organization. You can switch organizations by clicking on the Account menu in the Datadog nav bar and selecting the new organization we created for you.
 1. At the end of every section of this course, including this one, run `grademe`{{execute}} when you are finished. Go for it. Run it now.

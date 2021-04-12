@@ -1,6 +1,6 @@
 {
   "difficulty": "Intermediate",
-  "title": "Using Synthetics", 
+  "title": "Using Synthetics",
   "time": "15 minutes",
   "details": {
     "intro": {
@@ -9,7 +9,7 @@
       "text": "intro.md"
     },
     "finish": {
-      "text": "finish.md", 
+      "text": "finish.md",
       "code": "finish.sh"
     },
     "steps": [
@@ -22,26 +22,7 @@
       {
         "text": "step3.md"
       }
-    ],
-    "assets": {
-      "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }, 
-        {
-          "file": "finish",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }, 
-        {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
-      ]
-    }
+    ]
   },
   "environment": {
     "uilayout": "editor-terminal",
@@ -50,13 +31,13 @@
     "dashboards": [
       {
         "name": "App Dashboard",
-        "port": 30001
+        "port": 30001,
+        "href": "https://[[HOST2_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com/"
       }
     ]
   },
   "backend": {
     "imageid": "datadog-kubernetes-cluster-running",
-    "reuseConnection": "true",
-    "livetime": "1h"
+    "reuseConnection": "false"
   }
 }

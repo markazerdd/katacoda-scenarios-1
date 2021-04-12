@@ -1,5 +1,6 @@
 #!/bin/bash
-wall -n Starting to install Redis and Nginx
+rm /usr/local/bin/prepenvironment
+curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 mkdir -p /root/lab/docker
 
 mkdir -p /etc/datadog-agent
@@ -27,17 +28,17 @@ chmod 644 /var/log/redis/redis-server.log
 chmod 777 /var/log/redis
 ln -s /etc/redis /root/lab/redis
 apt install nginx -y
-sudo sed -i '20i location /nginx_status {\n stub_status on;\n  access_log   off;\n allow all;\n}' /etc/nginx/sites-enabled/default
+sudo sed -i '53i location /nginx_status {\n stub_status on;\n  access_log   off;\n allow all;\n}' /etc/nginx/sites-enabled/default
 /etc/init.d/nginx stop
 /etc/init.d/nginx start
 ln -s /etc/nginx /root/lab/nginx
 ln -s /etc/datadog-agent /root/lab/datadog
 
-wall -n Redis and Nginx are installed. You can start to follow the instructions now.
-docker pull redis 
-docker pull nginx
-docker pull datadog/agent
+docker pull redis:6.0.11
+docker pull nginx:1.19.7
+docker pull datadog/agent:7.25.1
 chmod 666 /var/log/nginx/access.log
 chmod 666 /var/log/nginx/error.log
 
 rm /root/install.sh
+statusupdate complete

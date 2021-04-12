@@ -1,4 +1,9 @@
 #!/bin/bash 
+until [ -f /usr/local/bin/prepenvironment ]
+do
+     sleep 0.3
+done
+
 if [ ! -f "/root/provisioned" ]; then
   if [[ -z "${DD_API_KEY}" ]]; then
     echo "Not provisioning"

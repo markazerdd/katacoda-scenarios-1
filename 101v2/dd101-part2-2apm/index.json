@@ -24,18 +24,9 @@
     ],
     "assets": {
       "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
+        
         {
           "file": "finish",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
-        {
-          "file": "grademe",
           "target": "/usr/local/bin/",
           "chmod": "+x"
         }
@@ -54,6 +45,7 @@
     ]
   },
   "backend": {
-    "imageid": "datadog-kubernetes-cluster-running"
+    "imageid": "datadog-kubernetes-cluster-running",
+    "reuseConnection": "false"
   }
 }

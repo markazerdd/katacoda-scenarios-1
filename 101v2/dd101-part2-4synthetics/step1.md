@@ -4,7 +4,7 @@ So far in this course we have looked at getting a better handle on the backend o
 2. Once all of the pods report 1/1 in the Ready column, login to Datadog and navigate to <a href="https://app.datadoghq.com/synthetics/list" target="_datadog">the Synthetics page</a>.
 3. If you haven't already enabled this, click **Get Started**. Otherwise, click the **New Test** button.
 4. Your two choices are **New API Test** and **New Browser Test**. API Test is good to test endpoints and websites for availability and uptime. Browser Tests are used when you need to record a specific flow through your website and monitor based on that flow. Choose **New API Test**.
-5. We want to test the availability of our website. The URL for your copy of the site is here: <pre class="file" data-target="clipboard">https://[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com</pre>
+5. We want to test the availability of our website. The URL for your copy of the site is here: <pre class="file" data-target="clipboard">https://[[HOST2_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com</pre>
 6. Copy the URL above and paste it into the text box for URL under Define request. Make sure you delete the 'https://' value in that field first, as it's already included in the copied URL.
 7. Expand Advanced Options. Notice that you can configure the request to follow redirects, and use custom headers, basic authentication, body, and cookies.
 8. Give the test a good name.

@@ -18,16 +18,8 @@
       {
         "text": "step2.md"
       }
-    ],
-    "assets": {
-      "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
-      ]
-    }
+    ]
+    
   },
   "environment": {
     "uilayout": "editor-terminal",
@@ -42,7 +34,7 @@
   },
   "backend": {
     "imageid": "datadog-kubernetes-cluster-running",
-    "reuseConnection": "true",
+    "reuseConnection": "false",
     "livetime": "1h"
   }
 }

@@ -11,7 +11,7 @@
       {
         "title": "Create an informational monitor",
         "text": "step1.md"
-      }, 
+      },
       {
         "title": "Create a notification monitor",
         "text": "step2.md"
@@ -22,11 +22,6 @@
     },
     "assets": {
       "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
         {
           "file": "finish",
           "target": "/usr/local/bin/",
@@ -50,11 +45,6 @@
           "file": "kcsetapi.sh",
           "target": "/root",
           "chmod": "+x"
-        }, 
-        {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
         }
       ]
     }
@@ -62,7 +52,7 @@
   "environment": {
     "uilayout": "terminal",
     "uimessage1": "",
-    "showdashboard": true, 
+    "showdashboard": true,
     "terminals": [
       {
         "name": "web2",
@@ -71,6 +61,7 @@
     ]
   },
   "backend": {
-    "imageid": "datadog-intro"
+    "imageid": "datadog-intro",
+    "reuseConnection": "false"
   }
 }

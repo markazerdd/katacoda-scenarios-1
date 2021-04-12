@@ -1,1 +1,1 @@
-Synthetics is the last lesson in the Introduction to Datadog course. Congratulations! Click the **Next** button to give us your feedback and download your certificate!
+Congratulations on completing the introductory Synthetics lesson. Stay tuned to the Learning Center for a deeper dive on Synthetics coming soon.

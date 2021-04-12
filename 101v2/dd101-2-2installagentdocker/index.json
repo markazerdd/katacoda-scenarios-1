@@ -3,8 +3,8 @@
   "title": "Installing the Agent",
   "details": {
     "intro": {
-      "courseData": "background.sh",
-      "code": "foreground.sh",
+      "background": "background.sh",
+      "foreground": "foreground.sh",
       "text": "intro.md"
     },
     "steps": [ 
@@ -19,23 +19,8 @@
     "assets": {
       "host01": [
         {
-          "file": "start",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
-        {
-          "file": "finish",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
-        {
           "file": "docker-compose.yml",
           "target": "/root/lab",
-          "chmod": "+x"
-        },
-        {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
           "chmod": "+x"
         }
       ]
@@ -52,6 +37,7 @@
     ]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "datadog-base-v2",
+    "reuseConnection": "false"
   }
 }

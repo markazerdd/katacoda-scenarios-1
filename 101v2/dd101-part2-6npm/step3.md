@@ -34,5 +34,7 @@ With this information, you can proceed to investigate, diagnose, and fix the net
 
 Now look at the Datadog network page and watch the number of retransmits and the average round-trip times taper downward. This may take 5 minutes or more.
 
+Nice work! Now you can reward yourself with a passing grade by typing `grademe`{{execute}} in the terminal.
+
 
 

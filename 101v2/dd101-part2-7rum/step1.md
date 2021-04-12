@@ -1,4 +1,4 @@
-This lab uses a docker version of a fake ecommerce website called "StoreDog". 
+This lab uses a docker to run a demo ecommerce website called "StoreDog".
 
 1. To get started with RUM, we need to set up a Datadog RUM application. First, navigate to the [RUM Applications](https://app.datadoghq.com/rum/list) section of your Datadog account.
 2. Click the **New Application** button.
