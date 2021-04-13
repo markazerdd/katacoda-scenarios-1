@@ -45,7 +45,7 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-master-ubuntu1604-1-16",
+    "imageid": "kubernetes-cluster-running:1.18",
     "reuseConnection": "false"
   }
 }
