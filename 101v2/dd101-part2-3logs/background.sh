@@ -20,6 +20,7 @@ if [ ! -f "/root/provisioned" ]; then
   sudo sed -i '42,53d' datadog-agent.yaml #the logs and apm env vars
   sudo sed -i '16d' datadog-agent.yaml #hostnetwork
   sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
+  sudo sed -i 's/6.11.1/6.26.0/' datadog-agent.yaml #agent version
   sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
   sudo sed -i '41,42d' frontend-service.yaml #dd_logs_injection
   sudo sed -i '37,38d' frontend-service.yaml # datadog service name

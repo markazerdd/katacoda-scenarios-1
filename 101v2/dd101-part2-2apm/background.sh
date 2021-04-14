@@ -16,6 +16,7 @@ if [ ! -f "/root/provisioned" ]; then
   cd k8s-yaml-files
 
   sudo sed -i '49,53d' datadog-agent.yaml #apm stuff
+  sudo sed -i 's/6.11.1/6.26.0/' datadog-agent.yaml #agent version
   sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
   sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
   # sudo sed -i '16d' datadog-agent.yaml #hostnetwork
