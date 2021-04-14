@@ -14,6 +14,8 @@ if [ ! -f "/root/provisioned" ]; then
   wall -n "Getting everything into the right place"
   mv trace/* .
   cd k8s-yaml-files
+  sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
+  sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
   # sudo sed -i '76,78d' datadog-agent.yaml #pointerdir in volumes
   # sudo sed -i '73,74d' datadog-agent.yaml #pointerdir in vol mounts
   # sudo sed -i '42,53d' datadog-agent.yaml #the logs and apm env vars

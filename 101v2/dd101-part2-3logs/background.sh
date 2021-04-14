@@ -19,6 +19,8 @@ if [ ! -f "/root/provisioned" ]; then
   sudo sed -i '73,74d' datadog-agent.yaml #pointerdir in vol mounts
   sudo sed -i '42,53d' datadog-agent.yaml #the logs and apm env vars
   sudo sed -i '16d' datadog-agent.yaml #hostnetwork
+  sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
+  sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
   sudo sed -i '41,42d' frontend-service.yaml #dd_logs_injection
   sudo sed -i '37,38d' frontend-service.yaml # datadog service name
   sudo sed -i '36,39d' node-api.yaml # service name and logs injection
