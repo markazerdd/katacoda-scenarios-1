@@ -42,7 +42,15 @@ do
 done
 kubectl create secret generic postgres-password --from-literal=token=postgres
 wall -n "Starting services"
-kubectl apply -f redis-deploy.yaml
+until kubectl apply -f redis-deploy.yaml
+do
+  kubeloopend=`date +%s`
+  kubeloopruntime=$((kubeloopend-kubeloopstart))
+  echo "kubectl isn't ready yet."
+  echo "It has been $kubeloopruntime seconds"
+  echo "If this doesn't resolve after 60 seconds, contact support (redis-deploy)."
+  sleep 2
+done
 kubectl apply -f postgres-deploy.yaml
 kubectl apply -f node-api.yaml
 kubectl apply -f pumps-service.yaml
