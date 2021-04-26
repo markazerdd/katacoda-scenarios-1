@@ -24,6 +24,9 @@ if [ ! -f "/root/provisioned" ]; then
   sudo sed -i '36,37d' pumps-service.yaml #logs injections
   sudo sed -i '38,39d' sensors-api.yaml #logs injection
   sudo sed -i '34,35d' sensors-api.yaml #service name
+  sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
+  sudo sed -i 's/6.11.1/6.27.0/' datadog-agent.yaml #agent version
+  sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
 fi
 # rm datadog-agent.yaml
 wall -n "Creating Kubernetes Secrets"
