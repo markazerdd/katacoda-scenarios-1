@@ -19,6 +19,9 @@ if [ ! -f "/root/provisioned" ]; then
   mv trace/* .
   cd k8s-yaml-files
   sudo sed -i '16d' datadog-agent.yaml #hostnetwork
+  sudo sed -i 's/extensions\/v1beta1/apps\/v1/g' datadog-agent.yaml
+  sudo sed -i 's/6.11.1/6.27.0/' datadog-agent.yaml #agent version
+  sudo sed -i '/updateStrategy:/i \ \ selector:\n\ \ \ \ matchLabels:\n\ \ \ \ \ \ app:\ datadog-agent' datadog-agent.yaml
 fi
 wall -n "Creating Kubernetes Secrets"
 kubeloopstart=`date +%s`
