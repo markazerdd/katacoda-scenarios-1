@@ -16,6 +16,7 @@ do
   sleep 2
 done
 
+clear
 
 
 prepenvironment

@@ -1,6 +1,6 @@
 1. Make sure all the pods in your environment are running or at least being created:
    `kubectl get pods`{{execute}}
-   *If you see errors when you run `kubectl get pods`, there was a problem starting your lab environment. Hit the power button at the top right of the window and then refresh the browser. This will give you a new machine.*
+   *If you see errors when you run `kubectl get pods`, there was a problem starting your lab environment. Refresh the browser to provision a new environment.*
 
 2. Once your environment is up and running, log into the <a href="https://app.datadoghq.com" target="_datadog">Datadog application</a>. Verify that metrics from the environment are coming in to the platform.
 

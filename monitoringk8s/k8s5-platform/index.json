@@ -22,11 +22,7 @@
     ],
     "assets": {
       "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        },
+       
         {
           "file": "idledown.sh",
           "target": "/usr/local/bin/",

@@ -15,16 +15,7 @@
         "text": "step1.md",
         "answer": "answer1.md"
       }
-    ],
-    "assets": {
-      "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
-      ]
-    }
+    ]
   },
   "environment": {
     "uilayout": "editor-terminal",

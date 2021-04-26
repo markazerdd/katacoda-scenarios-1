@@ -1,5 +1,6 @@
 #!/bin/bash
 # mkdir k8s-yaml-files
+curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 touch status.txt
 echo ""> /root/status.txt
 if [ ! -f "/root/provisioned" ]; then
@@ -27,7 +28,17 @@ fi
 
 # rm datadog-agent.yaml
 wall -n "Creating Kubernetes Secrets"
-kubectl create secret generic postgres-user --from-literal=token=datadog
+
+kubeloopstart=`date +%s`
+until kubectl create secret generic postgres-user --from-literal=token=datadog
+do
+  kubeloopend=`date +%s`
+  kubeloopruntime=$((kubeloopend-kubeloopstart))
+  echo "kubectl isn't ready yet."
+  echo "It has been $kubeloopruntime seconds"
+  echo "If this doesn't resolve after 60 seconds, contact support."
+  sleep 2
+done
 kubectl create secret generic postgres-password --from-literal=token=postgres
 wall -n "Starting services"
 kubectl apply -f redis-deploy.yaml

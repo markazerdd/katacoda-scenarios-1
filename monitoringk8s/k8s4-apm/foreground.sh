@@ -4,9 +4,8 @@ while [ ! -f "/usr/local/bin/prepenvironment" ]; do
 done
 sleep 0.3
 
+waitfork8s
 
-kubectl create secret generic datadog-api --from-literal=token=$DD_API_KEY
 clear
-
 
 prepenvironment

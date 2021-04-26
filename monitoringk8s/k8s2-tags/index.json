@@ -22,11 +22,7 @@
     ],
     "assets": {
       "host01": [
-        {
-          "file": "prepenvironment",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }, 
+         
         {
           "file": "lotsofpods.yaml",
           "target": "/root/k8s-yaml-files/"
