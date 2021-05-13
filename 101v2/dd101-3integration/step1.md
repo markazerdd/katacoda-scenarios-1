@@ -6,7 +6,7 @@ In this section we are setting up the integrations for Redis and Nginx. They are
 
     This is the same command you grabbed from Datadog in the previous section, minus the API key. Your API key is already set as an environment variable in your Training Lab terminals.
 
-2. Enable Log collection in the `datadog/datadog.yaml`{{open}} file. Either click on the link, or refresh the file explorer view and click on the file there. 
+2. Enable Log collection in the `datadog/datadog.yaml` file. You may need to refresh the file explorer until it becomes available. 
 3. Restart the Datadog Agent: `systemctl restart datadog-agent`{{execute}}
 4. Run the Status command we used in the last section: `datadog-agent status`{{execute}}. Scroll up till you get to the section for the Collector. Now scroll down to see all the checks that are enabled.
 5. Open the **datadog** folder and then expand the **conf.d** folder. Notice that there is a folder for each of the integrations that we support.
@@ -21,8 +21,20 @@ In this section we are setting up the integrations for Redis and Nginx. They are
 7. Take a look at the options in the YAML file: `datadog/conf.d/redisdb.d/conf.yaml`{{open}}. Notice that its looking at localhost on port 6379 for data about Redis. This is the default port. 
 8. Restart the Datadog Agent. Give the system a few seconds to update, then run the status command. Scroll back up to the Collector section. Do you see a block about Redis (`redisdb`) metrics being collected?
 9. Try enabling the logs as well. You will have take a look at the /var/log/redis directory in the terminal to find the file name, and then change the setting in the integration's yaml file. Restart `datadog-agent` and run `datadog-agent status` to ensure that `redisdb` is listed under Logs Agent.
+<details>
+  <summary>If you need help with this step, click here:</summary>
+  
+  - You'll need to uncomment the logs section in `datadog/conf.d/redisdb.d/conf.yaml`{{open}} and change the url to `/var/log/redis/redis-server.log`.
+  
+</details>
 10. Finally try to enable the Nginx integration. Rename the nginx example file:
 
     `mv /etc/datadog-agent/conf.d/nginx.d/conf.yaml.example /etc/datadog-agent/conf.d/nginx.d/conf.yaml`{{execute}}
 
     Then open the file: `datadog/conf.d/nginx.d/conf.yaml`{{open}}. If the file doesn't open, click the refresh button at the top and then click on the file in the file explorer view. You will have to update URL that the agent will use to check nginx's status. You can find the configuration for the nginx server at nginx/sites-enabled/default between lines 21 and 76. If you run into trouble, check out the port in the `nginx_status_url` and compare that to the port in the sites-enabled configuration. You can run `curl <url>` to see if the URL you choose works. If you still have problems, try out the status and restart options we looked at above. 
+<details>
+  <summary>If you need help with this step, click here:</summary>
+  
+  - The port in the nginx config (`datadog/conf.d/nginx.d/conf.yaml`{{open}}) needs to be changed to port 80.
+  
+</details>
