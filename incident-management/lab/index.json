@@ -10,11 +10,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Creating APM Monitors",
+        "title": "Declaring an Incident",
         "text": "step2.md"
       },
       {
-        "title": "Investigating Request Errors",
+        "title": "Incident Overview",
         "text": "step3.md"
       },
       {

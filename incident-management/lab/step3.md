@@ -1,27 +1,16 @@
-While the monitors are gathering data, let's see how the store-frontend service is performing. 
+After creating the incident, you are taken to the incident overview page. You'll notice some of the fields that you filled out in the previous step here as well as some new ones.
 
-1. Navigate to <a href="https://app.datadoghq.com/apm/services" target="_datadog">**APM** > **Services**</a>. <p> If there is a menu next to the **Search services** field, make sure that `env:ruby-shop` is selected. A menu is available if you've monitored more than one application environment in this Datadog organization.
+Communicating with your team during an incident is extremely important. You want to make sure that the response to the incident is handled in a deliberate manner. By knowing the actions that individuals are making in response to an incident, you can properly correlate the observations that you make about your application. Depending on the severity of the incident, you may want to establish a dedicated communication channel. You'll see buttons to add links for chat or video for this specific incident.
 
-2. Select the **store-frontend** service and browse its details. <p> Click the monitor banner to see that the monitor you created is linked to the service. <p> Notice that there is error data in the **Total Requests** and **Total Errors** graphs. *Looks like the store-frontend is not working correctly!*
+If your organization uses Slack or Jira, you will also see corresponding options here to chat on Slack or open a Jira issue for this incident.
+![Communication Options](assets/communication_options.png)
 
-3. Click a red bar in the **Total Errors** graph. Select the **View Traces** option. <p> You will be redirected to the Traces page. The search field is populated with the related facets. 
+To learn more about what is going on with your application, take another look at the monitor that alerted you that something was wrong. Since this incident was opened from that monitor, you're able to see it in the "Timeline" tab of the incident. Open the link there in a new tab for the `Monitor for Incident Management Course`.
 
-4. Click any trace to view its details. <p> Notice the spans in the Flame Graph that have error flags.
+After some investigation here (again, if you'd like to see the full investigation, please take the Introduction to Application Performance Monitoring course), you'll find that the service affected is `store-frontend` and that requests to the home page are slow.
 
-5. Below the Flame Graph, click the **Errors (#)** tab. <p> Browse the details for the errors titled `ActionView::Template::Error: undefined method [] for nil:NilClass`. <p> The first line in the details indicates `/spree/store-frontend/app/views/spree/layouts/spree_application.html.erb:##`. The error is originating from the indicated line of the spree_applications.html.erb file for the store-frontend service. <p> Let's fix the error.
+Back on the incident overview page, you now have a bit more information to describe the incident. You can select `store-frontend` as the affected service. You can also set `Monitor` as the detection method.
 
-6. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/layouts/spree_application.html.erb`{{open}} to open the file. Locate the line indicated in the error in step 5.
+You now know that customers are affected since it appears to be happening on all requests to the home page. Edit the customer impact to say that "Yes" there is an impact which is `Customers are experiencing long loading times for our site`{{copy}}. Note that you can adjust the timestamp here - maybe you received a support ticket or did additional research in Datadog that points to an earlier start time. For this lab, leave it at the default.
 
-7. Copy and delete (or cut) the text `<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>` from the line. <p> This line for banner ads should be in two other files for the store-frontend.
-
-8. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/products/show.html.erb`{{open}} to open this file. 
-
-9. Scroll to the bottom of the file (**Line 48**). Paste the line from step 7. 
-```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}}
-
-10. Click `store-frontend-broken-instrumented/store-frontend/app/views/spree/home/index.html.erb`{{open}} to open this file. 
-
-11. Create a new line under **Line 11** and paste the line from step 7. 
-```<br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>```{{copy}} Make sure to match the indent of the new line (**Line 12**) to that of the next line (**Line 13**).
-
-These changes should fix the errors you are seeing in the store-frontend service. It will take about 3-4 minutes for new data to be displayed into Datadog. In the meantime, if you scroll to the trace statistics graphs on the service page, you'll notice that the latency is high (> 1s). Let's explore what may be causing this high latency.
+Upon saving, you'll be prompted to adjust the severity of the incident. Now that you know customers are affected, you likely want to draw some attention to this incident from your team. For this lab, set the severity to `SEV-2`. This is one of the default severity levels provided by Datadog. If you ever want to adjust the severity levels for your team, you can do so in <a href="https://app.datadoghq.com/incidents/settings" target="_datadog">**Incident Management** > **Settings**</a>.
