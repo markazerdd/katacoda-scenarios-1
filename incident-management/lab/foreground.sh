@@ -23,7 +23,6 @@ sed -i 's/ddtrace==0.28.0/ddtrace==0.41.0/g' ./discounts-service/requirements.tx
 cd /ecommworkshop/deploy/docker-compose
 docker-compose -f docker-compose-broken.yml up -d
 
-clear
 
 curl -X POST "https://api.datadoghq.com/api/v1/monitor" \
 -H "Content-Type: application/json" \
@@ -56,7 +55,7 @@ EOF
 clear
 
 envready
+
 statusupdate complete
-clear
 
 prepenvironment
