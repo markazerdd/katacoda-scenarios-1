@@ -52,7 +52,7 @@ curl -X POST "https://api.datadoghq.com/api/v1/monitor" \
   "tags" : ["service:store-frontend", "env:ruby-shop", "resource_name:spree::homecontroller_index"]
 }
 EOF
-clear
+
 
 envready
 
