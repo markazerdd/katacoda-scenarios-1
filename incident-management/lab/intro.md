@@ -3,10 +3,9 @@ In this activity, you'll work with a fictional ecommerce app, Storedog. Fictiona
 You'll complete the following steps using Datadog Incident Management to resolve the incident.
 
 1. Preparing the Environment
-2. Establish the APM Monitor
-3. Investigating Request Errors
-4. Investigating Latency Issues
-5. Analyzing Trace Data in App Analytics
-6. Investigating Inefficient Database Queries
+2. Declare an Incident
+3. Investigating Latency Issues
+4. Analyzing Trace Data in App Analytics
+5. Investigating Inefficient Database Queries
 
 When you are ready to continue, click **Start Scenario**.
