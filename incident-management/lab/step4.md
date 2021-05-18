@@ -1,37 +1,14 @@
-The monitors you created should have gathered some data. Because the monitors are linked to the related services and resources, we can see the status of the monitors in the Service Map. If any monitors are in the `ALERT` status, we can start investigating the service from the Service Map.
+Now that you have a general idea of the issue, its time to determine the root cause and remediate it. In the `Remediation` tab of the incident, you can add related documents for addressing this type of issue. You can also create and assign tasks here related to the incident. Start by adding one assigned to you for "Look at app traces @<you>" (when you type the `@` symbol, you should get a dropdown to select your Datadog training account). Note that you can adjust the due date or assignees after it is created.
 
-1. Navigate to <a href="https://app.datadoghq.com/apm/map" target="_datadog">**APM** > **Service Map**</a>. <p> The outlines of the store-frontend, discounts-service, and advertisements-service nodes are red. This means that the monitor that you created for each service endpoint is in the `ALERT` status.
+In another tab, take another look at the monitor that alerted you to the issue. Click on the "Evaluation Graph" and then "Related Traces":
+![Related Traces](assets/related_traces.png)
 
-2. Click the **store-frontend** node, then click **Inspect**. <p> Because the discounts service and advertisements service are downstream, let's start investigating those services.  
+The resulting page should be a list of traces related to this monitor. Note that they will be green since the requests are completing successfully, just slowly. Click on one of these traces and you will see that the culprit here is in fact the ad service taking so long:
+![Detailed Trace](assets/trace.png)
 
-3. Click the **discounts-service** node, then click **View service overview**. A new tab will open for the discounts-service page.
+Click the button to open this trace as a full page. Now you can add this trace to the incident so your coworkers can see what you're referencing. Open the Datadog clipboard (**Cmd/Ctrl + Shift + X**), click "Add current page" and then "Add selected item to..." to add this trace to your incident. 
+![Add Trace](assets/trace_cb.png)
 
-4. Expand the **Latency** graph by clicking the arrow icon in the top right of the graph. <p> The service latency seems to hover at 2.5 seconds. *That's a noticable and consistent lag in performance!* <p> Close the graph window.
+You can now mark the trace investigation task complete in your incident and add an additional one to "Investigate ad service code @<you>". Back in the incident overview, you can also add the "advertisements-service" as a service related to the incident.
 
-5. Scroll down to the **Endpoints** list and click the **Get /discount** endpoint to view its details. 
-
-6. Click the monitor banner. Notice that the monitor for the endpoint is in the `ALERT` status. 
-
-7. View the **Latency** graph, the **Span Summary**, and the **Traces** list for the endpoint. Sort the Span Summary using the **AVG DURATION** in descending order. <p> Notice that the 2.5 second duration is consistent. 
-
-8. Go back to the Service Map browser tab where you were inspecting the store-frontend.
-
-9. Repeat steps 3 to 7 for the **advertisements-service**. <p> For step 6, click the **Get /ads** endpoint. This is the endpoint you created the monitor for. <p> Notice the **AVG LATENCY** for this endpoint is also about 2.5 seconds. *The **Get /ads** endpoint has the same latency as the **Get /discount** endpoint!* <p> There is something in the build for these endpoints that is causing a consistent latency. Let's check the applications files that define these endpoints to see what may be causing the issue. 
-
-10. Click `discounts-service/discounts.py`{{open}}.
-
-11. Browse the file. Notice that two sleep commands (**Lines 32-33** and **Lines 52-53**) were left after testing. Delete these lines.
-
-12. Click `ads-service/ads.py`{{open}}.
-
-13. Browse the file. Notice that two sleep commands (**Lines 41-42** and **Lines 55-56**) were left after testing. Delete these lines.
-
-14. Go back to the Service Map browser tab where you were inspecting the store-frontend.
-
-15. Click the **store-frontend** node, then click **View service overview**. 
-
-16. Scroll to the **Endpoints** list and sort the list by **AVG LATENCY**. <p> Note: If the **AVG LATENCY** column is not displayed, click the **Options** icon next to the **Search Endpoints** field and select **AVG LANTECY**. <p> Notice the `Spree::HomeController#index`, `Spree::ProductsController#show`, and `Spree::ProductsController#index` have latencies more than 2.5 seconds. 
-
-17. For each endpoint listed in step 15, click the endpoint to view its page. <p> Scroll to the **Span Summary** and sort by **AVG DURATION**. <p> Scroll to the **Traces** list. Click any of the traces to view the details. <p> Notice from the **Span Summary** and **Traces** that the endpoint is dependent on the discounts and advertisements services. <p> For the `Spree::HomeController#index` endpoint, notice the monitor you created is in the alert status. (Note: To save time, you didn't create monitors for the other endpoints. You can also create monitors for the other two endpoints to see how they are affected by fixing the app.)
-
-Deleting the lines in step 11 and 13 that cause the 2.5 second latencies in the discounts and advertisements endpoints should also remove these latencies in the store-frontend endpoints. 
+Take a look at the `ads-service/ads.py`{{open}} file and see if you can find the source of this latency. 
