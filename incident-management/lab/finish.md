@@ -1,3 +1,3 @@
-Congratulations! You've used Datadog APM to fix the performance of the Storedog application.
+Congratulations! You've used Datadog Incident Management to organize your response to an issue with the Storedog application.
 
 To continue, click **Next**.

@@ -18,15 +18,15 @@
         "text": "step3.md"
       },
       {
-        "title": "Remediation",
+        "title": "Investigation",
         "text": "step4.md"
       },
       {
-        "title": "Analyzing Trace Data in App Analytics",
+        "title": "Remediation",
         "text": "step5.md"
       },
       {
-        "title": "Investigating Inefficient Database Queries",
+        "title": "Postmortem",
         "text": "step6.md"
       }
     ],
