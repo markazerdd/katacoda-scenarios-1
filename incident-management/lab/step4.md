@@ -1,4 +1,6 @@
-Now that you have a general idea of the issue, its time to determine the root cause and remediate it. In the `Remediation` tab of the incident, you can add related documents for addressing this type of issue. You can also create and assign tasks here related to the incident. Start by adding one assigned to you for "Look at app traces @[you]" (when you type the `@` symbol, you should get a dropdown to select your Datadog training account). Note that you can adjust the due date or assignees after it is created.
+Now that you have a general idea of the issue, its time to determine the root cause and remediate it. In the `Remediation` tab of the incident, you can add related documents for addressing this type of issue. You can also create and assign tasks here related to the incident.
+
+Start by adding one assigned to you for "Look at app traces @[you]" (when you type the `@` symbol, you should get a dropdown to select your Datadog training account). Note that you can adjust the due date or assignees after it is created.
 
 In another tab, take another look at the monitor that alerted you to the issue. Click on the "Evaluation Graph" and then "Related Traces":
 ![Related Traces](assets/related_traces.png)

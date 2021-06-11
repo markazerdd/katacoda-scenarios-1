@@ -8,8 +8,8 @@ Think about what caused the incident and how it could be prevented in the future
 
 In our lab scenario, there are probably a few items that could be part of post-incident tasks:
 - Formalize a process for adding and removing debug statements from the codebase, maybe by using specific code comment tags.
-- Add a test or latency for the ad service.
+- Add a latency test for the ad service.
 
-Another thing to consider is if the monitoring that made you aware of the incident was sufficient. Here, the monitor was created specifically for this lab, but in production, its unlikely that the monitor would fit the incident so perfectly. Adding a task to review associated monitoring and threshold levels would be another wise post-incident action.
+Another thing to consider is if the monitoring that made you aware of the incident was sufficient. Here, the monitor was created specifically for this lab, but in production, its unlikely that the monitor would fit the incident so perfectly. Did the monitor detect the issue quickly enough? Adding a task to review associated monitoring and threshold levels would be another wise post-incident action.
 
 Run `grademe`{{execute}} to mark this course as complete before moving on to the course wrap-up.
