@@ -1,4 +1,4 @@
-After creating the incident, you are taken to the incident overview page. You'll notice some of the fields that you filled out in the previous step here, as well as some new ones.
+After creating the incident, you are taken to the incident overview page (if you get an Incident Management welcome screen, press **Get Started**). You'll notice some of the fields that you filled out in the previous step here, as well as some new ones.
 
 Communicating with your team during an incident is extremely important. You want to make sure that the response to the incident is handled in a deliberate manner. By knowing the actions that individuals are making in response to an incident, you can properly correlate the observations that you make about your application. Depending on the severity of the incident, you may want to establish a dedicated communication channel. You'll see buttons to add links for chat or video for this specific incident.
 
