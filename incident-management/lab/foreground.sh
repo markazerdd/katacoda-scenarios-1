@@ -32,7 +32,7 @@ curl -X POST "https://api.datadoghq.com/api/v1/monitor" \
 {
   "name" : "Monitor for Incident Management Course",
   "type" : "metric alert",
-  "message" : "`store-frontend` average latency is too high.",
+  "message" : "\`store-frontend\` average latency is too high.",
   "query" : "avg(last_1m):avg:trace.rack.request{env:ruby-shop,resource_name:spree::homecontroller_index,service:store-frontend} > 1",
   "options": {
     "notify_audit": false,
