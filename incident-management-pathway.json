@@ -4,7 +4,9 @@
   "icon": "fa-bolt",
   "courses": [
     {
+      "pathway_id": "dadgoat/incident-management",
       "course_id": "lab",
+      "id": "lab",
       "title": "Incident Management Lab",
       "description": "Incident Management Lab"
     }
