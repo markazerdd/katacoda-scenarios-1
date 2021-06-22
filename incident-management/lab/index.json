@@ -56,10 +56,6 @@
           "chmod": "+x"
         },
         {
-          "file": "docker-compose-fixed.yml",
-          "target": "/root"
-        },
-        {
           "file": "docker-compose-broken.yml",
           "target": "/root"
         }

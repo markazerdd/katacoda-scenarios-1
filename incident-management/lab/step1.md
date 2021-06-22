@@ -2,7 +2,7 @@ In the terminal on the right, the Storedog app is being instrumented for APM wit
 
 Once the initialization completes, you can browse the Storedog app by clicking on the `storedog` tab in the terminal to the right. You may notice some long page load times or other broken behavior.
 
-As part of the lab setup, a monitor was established to evaluate the time it takes for the server to handle requests for the home page. It will raise an alert if the latency for the past 1 minute has an average greater than 1 second. The focus of this course is incident management, if you want to understand how to set up APM and this monitor yourself, enroll in the "Introduction to Application Performance Monitoring" course.
+As part of the lab setup, a monitor was established to evaluate the time it takes for the server to handle requests for the home page as measured by the Datadog Agent. It will raise an alert if the latency for the past 1 minute has an average greater than 1 second. The focus of this course is incident management, if you want to understand how to set up APM and this monitor yourself, enroll in the "Introduction to Application Performance Monitoring" course.
 
 Now you're going to log into Datadog and check on the monitor that was created.
 

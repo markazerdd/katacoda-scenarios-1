@@ -2,7 +2,6 @@
 
 curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
-mv /root/docker-compose-fixed.yml /ecommworkshop/deploy/docker-compose/
 mv /root/docker-compose-broken.yml /ecommworkshop/deploy/docker-compose/
 statusupdate files
 
