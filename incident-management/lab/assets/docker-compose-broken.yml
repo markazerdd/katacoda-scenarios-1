@@ -9,7 +9,7 @@ services:
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
       - DD_PROCESS_AGENT_ENABLED=true
       - DD_DOCKER_LABELS_AS_TAGS={"my.custom.label.team":"team"}
-      - DD_TAGS='env:ruby-shop'
+      - DD_TAGS='env:ruby-shop course:incident-management'
     ports:
       - "8126:8126"
     volumes:
@@ -32,7 +32,7 @@ services:
       - DD_TRACE_ANALYTICS_ENABLED=true
       - DD_PROFILING_ENABLED=true
     image: "ddtraining/discounts:1.0.0"
-    command: [sh, -c, "pip install ddtrace -U && ddtrace-run flask run --port=5001 --host=0.0.0.0"]
+    command: [sh, -c, "ddtrace-run flask run --port=5001 --host=0.0.0.0"]
     ports:
       - "5001:5001"
     volumes:
