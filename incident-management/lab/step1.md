@@ -8,6 +8,6 @@ Now you're going to log into Datadog and check on the monitor that was created.
 
 1. In a new window/tab, log in to the <a href="https://app.datadoghq.com/account/login" target="_datadog">Datadog account/organization</a> that was created for you by learn.datadoghq.com. If you need to recall your credentials, type `creds`{{execute}} in the terminal.
 
-2. Navigate to <a href="https://app.datadoghq.com/monitors/manage" target="_datadog">**Monitors** > **Manage**</a> in Datadog to view the list of monitors that are being evaluated for your account. The monitor established for this course is titled `Monitor for Incident Management Course`. If you have taken this course before or other courses, you may have multiple copies of this monitor or other monitors, that is okay.
+2. Navigate to <a href="https://app.datadoghq.com/monitors/manage" target="_datadog">**Monitors** > **Manage Monitors**</a> in Datadog to view the list of monitors that are being evaluated for your account. The monitor established for this course is titled `Monitor for Incident Management Course`. If you have taken this course before or other courses, you may have multiple copies of this monitor or other monitors, that is okay.
 
 3. If your lab environment was recently created, the monitor status will be gray and state "NO DATA". Refresh the Datadog page until the monitor is in an "ALERT" status before moving to the next step.
