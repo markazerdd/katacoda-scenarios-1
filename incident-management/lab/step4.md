@@ -5,7 +5,9 @@ Start by adding one assigned to you for "Look at app traces @[you]" (when you ty
 In another tab, take another look at the monitor that alerted you to the issue. Click on the "Evaluation Graph" and then "Related Traces":
 ![Related Traces](assets/related_traces.png)
 
-The resulting page should be a list of traces related to this monitor. Note that they will be green since the requests are completing successfully, just slowly. Click on one of these traces and you will see that the culprit here is in fact the ad service taking so long:
+The resulting page should be a list of traces related to this monitor:
+![Traces Table](assets/traces_table.png)
+Note that they will be green since the requests are completing successfully, just slowly. Click on one of these traces to open a flamegraph visualizing the execution time of each service involved with the trace. You will see that the culprit here is in fact the ad service taking so long:
 ![Detailed Trace](assets/trace.png)
 
 Click the button to open this trace as a full page. Now you can add this trace to the incident so your coworkers can see what you're referencing. Open the Datadog clipboard (**Cmd/Ctrl + Shift + K**), click "Add current page" and then "Add selected item to..." to add this trace to your incident.
