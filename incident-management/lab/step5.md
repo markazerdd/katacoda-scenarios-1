@@ -8,5 +8,5 @@ Removing these lines of code should fix the latency issue. It may take a couple 
 
 Once it does, you can:
 - mark your remediation task complete
-- edit the customer impact to be "No" (and set an end time if desired)
+- in the customer impact section, toggle "Active" off (and adjust the end time if desired)
 - change the incident status to "RESOLVED"
