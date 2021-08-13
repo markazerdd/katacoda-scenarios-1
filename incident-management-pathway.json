@@ -1,14 +1,14 @@
 {
-  "title": "Introduction to Incident Management",
+  "title": "Incident Management Workshop",
   "description": "",
   "icon": "fa-bolt",
   "courses": [
     {
-      "pathway_id": "dadgoat/incident-management",
+      "pathway_id": "dadgoat/incident-management-workshop",
       "course_id": "lab",
       "id": "lab",
-      "title": "Incident Management Lab",
-      "description": "Incident Management Lab"
+      "title": "Incident Management Workshop",
+      "description": "Incident Management Workshop"
     }
   ]
 } 
