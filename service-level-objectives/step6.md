@@ -1,31 +1,34 @@
-# Latency SLIs using bucketed counters (optional)
+# Modeling failure in our systems
 
-Note: There is no action in the Katacoda environment for this step. This is for discussion. 
+Let's start introducing errors by switching images! This will allow us to explore what happens to our SLO's status and error budget and will cause our Error Budget Monitor to alert. 
+ 
+In a real world scenario, a popular e-commerce site will receive a lot of traffic and there is eventually going to be some errors introduced in the application for various reasons. For now we are dealing with our hypothetical web store. 
 
-As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey.
+Close all storedog tabs that you have open in your browser.
+ 
+In the first terminal window where you currently have docker-compose running, press CTRL + C to stop the command. Wait 10 to 15 seconds until docker-compose gracefully stops and you regain the ability to type commands in the terminal window.
 
-There are several ways of implementing a Latency SLI. One way that we are going to discuss during this step is to increment a counter for each event (e.g a HTTP  request) that completes under a certain time (the good events) and compare this value to the total number of events. It’s also helpful to increment multiple counters that represent “buckets” of time, for example:
-* All requests <= 250ms
-* All requests <= 500ms
-* All requests <= 1s
+Now enter a new docker-compose command using the broken image like so:
 
-We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
+`docker-compose -f ./docker-compose-files/docker-compose-broken-instrumented.yml up`
 
-`Buckets = [10, 50, 500] # in milliseconds`
+Wait a few minutes until the application has fully started again.
+ 
+Try going back to the storedog homepage, selecting a product and adding it to your cart. What happens when you do this? You should be getting a NoMethodError. In the real world this could have been any error that causes a manage cart request to fail. Press the back button in your browser and try adding other items to your cart to purposely induce more errors.
+ 
+Go back to the SLO details side panel. What do you see now? Your SLO status and error budget should no longer be 100% anymore. In fact, your SLO has likely already breached! This is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history, so the denominator value is very small, making the SLO sensitive to even just one error. In a real world scenario the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
 
-`For each event (e.g request):`
-	`startTime = Start a time timer`
-	`do something with this event...`
-	`endTime = Stop the timer`
-	`timeTaken = endTime - startTime`
+![SLO Detail Errors](/datadog/scenarios/service-level-objectives/assets/details-error.png)
+ 
+Try hovering over the different colored bars in the bar graph and you'll be able to see a count of good and bad events that occurred at a given time: 
 
-	`Foreach bucket in sort(buckets):`
-		`If timeTaken <= bucket:`
-`incrementCounter(“metric.latency.count.under_{bucket}”, 1)`
-	`incrementCounter(“metrics.latency.count.total”, 1)`
+![Bar Graph Errors](/datadog/scenarios/service-level-objectives/assets/graph-errors.png)
 
-To implement this you’ll need to emit custom metrics from the application using Dogstatd, https://docs.datadoghq.com/developers/dogstatsd/.
+You should also notice that your Error Budget Monitor has now entered the `ALERT` state.
 
-You can then create a new Metric Based SLO based on the two metrics.
+![Alert State](/datadog/scenarios/service-level-objectives/assets/alert-state.png)
 
-Note: There is no action in the Katacoda environment for this step.
+When you begin to set SLOs on your own products using Datadog, your goal should always be to spend your error budget without breaching the SLO. Don't forget to experiment with your SLO targets until you find the right balance for your products and teams! This helps maintain a high standard for your end user experience, while also making goals manageable and realistic for your engineering team to accomplish.
+
+That concludes the required steps of this workshop, Steps 7 and 8 are optional if you are interested! We hope this workshop was valuable to you and showed you that by being diligent with creating and managing SLOs for critical user journeys, we can uncover user experience issues and take action to resolve them quickly to reduce their impact!
+

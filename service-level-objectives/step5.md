@@ -1,29 +1,23 @@
-# Modeling failure in our systems
+# Setting an alert on our SLO
 
-Let's start introducing errors by switching images! This will allow us to explore what happens to our SLO's status and error budget. 
- 
-In a real world scenario, a popular e-commerce site will receive a lot of traffic and there is eventually going to be some errors introduced in the application for various reasons. For now we are dealing with our hypothetical web store. 
+In order to avoid overspending your error budget, you need to be paying attention to when your SLO is close to being breached. Overspending your error budget means you've violated your SLO and might be on the hook to compensate your clients as per the stipulations in your SLA. Once you've gotten close to 100% consumption of your error budget, the team responsible for that SLO or user journey should switch priorities from feature development to reliability work to prevent any breaches.
 
-After you're done, close all storedog tabs that you have open in your browser.
- 
-In the first terminal window where you currently have docker-compose running, press CTRL + C to stop the command. Wait 10 to 15 seconds until docker-compose gracefully stops and you regain the ability to type commands in the terminal window.
+To that end, new for Dash 2020, we are excited to announce Error Budget Monitors in public beta for metric-based SLOs! Error Budget Monitors notify you when a certain percentage of your error budget has been consumed. Error Budget Monitors are great for helping you take a proactive approach to managing the health of your SLOs and ensuring you make use of your error budgets without overspending. 
 
-Now enter a new docker-compose command using the broken image like so:
+Now that we've created a metric-based SLO, let's set an Error Budget Monitor on it! 
 
-<pre data-target="clipboard">
-docker-compose -f ./docker-compose-files/docker-compose-broken-instrumented.yml up
-</pre>
+To do this, go back to the details side panel of your SLO and select the `Set up Alerts` button. This will take you to a configuration page for you to set your Error Budget Monitor. In a real world scenario, it would make sense to set the monitor to alert us a bit before we've completely spent our error budget, so let's set our thresholds accordingly.
 
-Wait a few minutes until the application has fully started again.
- 
-Try going back to the storedog homepage, selecting a product and adding it to your cart. What happens when you do this? You should be getting a NoMethodExists error. In the real world this could have been any error that causes the add item request to fail. Press the back button in your browser and try adding other items to your cart to purposely induce more errors.
- 
-Go back to the SLO details page. What do you see now? Your SLO status and error budget should no longer be 100% anymore .
+1. Set the alert threshold to `90%` so that the monitor is configured to notify us before our error budget is 100% consumed
+2. Using the `New Condition` button, we can add an optional warning threshold. `75%` would be a sensible choice.
+3. Enter a monitor message in the large text box. *Optional* type in `@` and select your name to receive an email notification.
 
-![SLO Detail Errors](./assets/details-error.png)
- 
-Try hovering over the different colored bars in the bar graph and you'll be able to see a count of good and bad events that occurred at a given time: 
+![Error Budget Monitor](/datadog/scenarios/service-level-objectives/assets/error-budget-monitor.png)
 
-![Bar Graph Errors](./assets/graph-errors.png)
+Save the monitor when you're done!
 
-Over time if these errors were to continue at a high pace, our error budget would quickly deplete and we might be at risk of breaching our Service Level Agreements (SLAs) with customers. By being diligent with creating and managing SLOs for critical user journeys we can uncover user experience issues and take action to resolve them quickly to reduce their impact!
+You'll see the monitor appear under the `Alerts` tab in your SLO's side panel. Initially it will be in `NO DATA` since it was just created, before quickly transitioning to `OK` as we haven't introduced any errors yet.
+
+![Alerts Tab](/datadog/scenarios/service-level-objectives/assets/alerts-tab.png)
+
+In the next step, we'll purposely introduce some errors to breach our SLO and cause our Error Budget Monitor to alert.

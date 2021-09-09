@@ -6,11 +6,9 @@ You can inspect the `docker-compose-fixed-instrumented.yml` in the `/docker-comp
 
 To get started you'll need to run the following command in the terminal to your right:
 
-<pre data-target="clipboard">
-docker-compose -f ./docker-compose-files/docker-compose-fixed-instrumented.yml up
-</pre>
+`docker-compose -f ./docker-compose-files/docker-compose-fixed-instrumented.yml up`
 
-You can check that storedog is running by clicking on the `storedog` tab next to the `Terminal` tab to your right. **Note:** It takes several minutes for the docker-compose command to fully ramp up, so if you see a page like this one just wait a little bit longer before refreshing the page:
+You can check that storedog is successfully running by clicking on the `storedog` tab next to the `Terminal` tab to your right. **Note:** It takes several minutes for the docker-compose command to fully ramp up, so if you see a page like this one just wait a little bit longer before refreshing the page:
 
 ![Port Error](/datadog/scenarios/service-level-objectives/assets/katacoda-error.png)
 

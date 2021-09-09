@@ -1,19 +1,31 @@
-# Creating a monitor-based SLO (optional)
+# Latency SLIs using bucketed counters (optional)
 
-Another way to track latency as an SLI would be using a Datadog monitor in a Monitor Based SLO. We can define this SLI as: *“99% of time, the p99 latency of a cart request should be lower than 1s”*
+Note: There is no action in the Katacoda environment for this step. This is for discussion. 
 
-Navigate to **Monitors -> New Monitors** and select type APM, or go directly to https://app.datadoghq.com/monitors#create/apm
+As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey.
 
-1. The **Primary tag** should be `env:ruby-shop` by default
-2. For **Service** select `store-frontend`
-3. For **Resource** select `spree::ordercontroller_edit`
-4. Under *Set alert conditions* set the monitor to alert when the `p99 latency` is above `1s` over the `last 5 minutes`. 
-5. Save the monitor
+There are several ways of implementing a Latency SLI. One way that we are going to discuss during this step is to increment a counter for each event (e.g a HTTP  request) that completes under a certain time (the good events) and compare this value to the total number of events. It’s also helpful to increment multiple counters that represent “buckets” of time, for example:
+* All requests <= 250ms
+* All requests <= 500ms
+* All requests <= 1s
 
-Now let’s create our SLO. Go to https://app.datadoghq.com/slo/new. Select `Monitor Based` and select the monitor you just created from the dropdown by searching for its name. Then set a target of 99% over the past 7 day and save the new SLO.
+We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
 
-This SLO's status should be less than 100% due to there being poor latency in the broken image, both when you were using the application in this state and due to the simulated traffic also experiencing poor latency.
+`Buckets = [10, 50, 500] # in milliseconds`
 
-Click on IoT Project in Katacoda to open the app.
+`For each event (e.g request):`
+	`startTime = Start a time timer`
+	`do something with this event...`
+	`endTime = Stop the timer`
+	`timeTaken = endTime - startTime`
 
-Note: You may have noticed that we are using a gauge metric to represent the latency for this example: `trace.rack.request.duration.by.resource_service.99p` and we used a monitor to find out the percentage of the time that this gauge is under our threshold. While this works, it can be a bit hard to grasp. Whether you use monitors or latency as bucketed counters, you should select whatever works better for your requirements. 
+	`Foreach bucket in sort(buckets):`
+		`If timeTaken <= bucket:`
+`incrementCounter(“metric.latency.count.under_{bucket}”, 1)`
+	`incrementCounter(“metrics.latency.count.total”, 1)`
+
+To implement this you’ll need to emit custom metrics from the application using Dogstatd, https://docs.datadoghq.com/developers/dogstatsd/.
+
+You can then create a new Metric Based SLO based on the two metrics.
+
+Note: There is no action in the Katacoda environment for this step.

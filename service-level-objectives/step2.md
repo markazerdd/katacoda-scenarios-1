@@ -2,13 +2,13 @@
 
 Take the opportunity to explore the web app by clicking on the `storedog` tab in the Katacoda terminal to open it in your browser.  
 
-Sign in into Datadog, and check to see if the services have appeared by going to the APM Services page by navigating to **APM -> Services**, or by clicking https://app.datadoghq.com/apm/services. 
+Sign into Datadog, and check to see if the services have appeared by going to the APM Services page by navigating to **APM -> Services**, or by clicking https://app.datadoghq.com/apm/services. 
 
-![Services Navigation](./assets/services-nav.png)
+![Services Navigation](/datadog/scenarios/service-level-objectives/assets/services-nav.png)
 
 The page should look something like this: 
 
-![Services List](./assets/services-list.png)
+![Services List](/datadog/scenarios/service-level-objectives/assets/services-list.png)
 
 Eventually, when you switch to using the broken image you'll see parts of the application experiencing high error rates.
 
@@ -20,7 +20,7 @@ In the interest of time, let's focus on one particular user journey: managing it
 
 If this particular user journey were to become unreliable, our hypothetical customers might not be able complete the purchases that they want to make. Since this user journey is so critical to this application, that makes it a great candidate for setting an SLO to ensure its reliability.
 
-![storedog Cart](./assets/storedog-cart.png)
+![storedog Cart](/datadog/scenarios/service-level-objectives/assets/storedog-cart.png)
 
 Now that we've selected a critical user journey, what Service Level Indicators (SLIs) should we track? Since this is a request/response endpoint, it would be a good idea to set an SLO on its success rate and its latency.
 
