@@ -1,8 +1,8 @@
 {
-  "title": "Monitoring App Performance",
-  "description": "Using APM to investigate app performance ",
+  "title": "Incident Management Workshop",
+  "description": "Leverage Incident Management to accelerate your end-to-end incident response through Datadog’s unified platform.",
   "difficulty": "Beginner",
-  "time": "40 minutes",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
@@ -32,8 +32,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "foreground.sh",
-      "courseData": "background.sh"
+      "foreground": "foreground.sh",
+      "background": "background.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -41,22 +41,19 @@
     "assets": {
       "host01": [
         {
-          "file": "grademe",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
+          "file": "docker-compose.yml",
+          "target": "/root"
         },
         {
-          "file": "envready",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
+          "file": "cli.py",
+          "target": "/root"
         },
         {
-          "file": "check-file",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
+          "file": "storedog-frontend-dashboard.json",
+          "target": "/root"
         },
         {
-          "file": "docker-compose-broken.yml",
+          "file": "requirements.txt",
           "target": "/root"
         }
       ]
@@ -64,13 +61,13 @@
   },
   "environment": {
     "uilayout": "editor-terminal", 
-    "uieditorpath": "/ecommworkshop",
+    "uieditorpath": "/root/lab",
     "hideHiddenFiles": true,
     "exclusionPatterns": ["**/store-frontend/tmp/*", "**/store-frontend/log/*"],
     "showdashboard": true,
     "dashboards": [{"name": "storedog", "port": 3000}]
   },
   "backend": {
-    "imageid": "datadog-base-v2"
+    "imageid": "datadog-base-v3"
   }
 }

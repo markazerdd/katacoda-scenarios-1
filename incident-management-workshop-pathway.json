@@ -4,9 +4,9 @@
   "icon": "fa-bolt",
   "courses": [
     {
-      "pathway_id": "dadgoat/incident-management-workshop",
-      "course_id": "lab",
-      "id": "lab",
+      "pathway_id": "dadgoat",
+      "course_id": "incident-management-workshop",
+      "id": "incident-management-workshop",
       "title": "Incident Management Workshop",
       "description": "Incident Management Workshop"
     }

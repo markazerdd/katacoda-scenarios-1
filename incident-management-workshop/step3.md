@@ -5,14 +5,16 @@ Communicating with your team during an incident is extremely important. You want
 The trial organization for this lab does not have any integrations set up. If your organization has integrated [Slack](https://docs.datadoghq.com/integrations/slack/?tab=slackapplicationus) or [Jira](https://docs.datadoghq.com/integrations/jira/), you will also see corresponding options here to chat on Slack or open a Jira issue for this incident.
 ![Communication Options](assets/communication_options.png)
 
-To learn more about what is going on with your application, take another look at the monitor that alerted you that something was wrong. Since this incident was opened from that monitor, you're able to see it in the "Timeline" tab of the incident. Open the link there in a new tab for the `Monitor for Incident Management Course`.
+Because this incident was opened from a graph, you're able to see a live view of it in the **Timeline** tab of the incident. You can click the **external link** icon in the upper-right corner of the graph to view it fullscreen in the context of the Storedog Frontend Dashboard.
 
 After some investigation here (full details of how to come to this conclusion are in the Introduction to Application Performance Monitoring course), you've determined that the service affected is `store-frontend` and that requests to the home page are slow.
 
-Back on the incident overview page, you now have a bit more information to describe the incident. Click **Edit**. You can select `store-frontend` as the affected service, and also set `Monitor` as the detection method. Click **Save**.
+Back on the incident **Overview** tab, you now have a bit more information to describe the incident. Click **Edit**. You can select `store-frontend` as the affected service, and also set `Monitor` as the detection method. Click **Save**.
 
-You now know that customers are affected since it appears to be happening on all requests to the home page. Edit the customer impact to say that "Yes" there is an impact which is `Customers are experiencing long loading times for our site`{{copy}}.
+You now know that customers are affected since it appears to be happening on all requests to the home page. Edit the customer **Impact** section to say that "Yes" there is an impact which is `Customers are experiencing long loading times for our site`{{copy}}.
 
 Note that you can adjust the timestamp here - maybe you received a support ticket or did additional research in Datadog that points to an earlier start time. For this lab, leave it at the default.
 
-Upon saving, you'll be prompted to adjust the severity of the incident. Now that you know customers are affected, you likely want to draw some attention to this incident from your team. For this lab, set the severity to `SEV-2`. This is one of the default severity levels provided by Datadog. If you ever want to adjust the severity levels for your team, you can do so in <a href="https://app.datadoghq.com/incidents/settings" target="_datadog">**Incident Management** > **Settings**</a>.
+Click the **Save** button.
+
+Upon saving, you'll be prompted to adjust the severity of the incident. Now that you know customers are affected, you likely want to draw some attention to this incident from your team. For this lab, set the severity to `SEV-2`. This is one of the default severity levels provided by Datadog and is defined as a `Major issue affecting customers and users.`. If you ever want to adjust the descriptions of the severity levels for your organization, you can do so in <a href="https://app.datadoghq.com/incidents/settings" target="_datadog">**Incident Management** > **Settings**</a>.
