@@ -2,6 +2,8 @@
 
 This SLO workshop uses two docker images in order to build a microservices environment for a small scale e-commerce web app called `storedog`. The first image is a fully functioning version of the application, the second image purposely introduces issues that will cause errors and poor latency in the application. Both images are already instrumented to work with Datadog APM.
 
+The environment is ready when you see the Datadog credentials that have been created for you. Please wait until this happens before interacting with the lab.
+
 Open the IDE by clicking on the **IDE** tab. It takes a few seconds to load and may display an error before loading fully. You should see a `docker-compose.yml` file. After clicking to open it in the IDE, you'll see the exact services you are running.
 
 When the lab loaded, this image was automatically started.
