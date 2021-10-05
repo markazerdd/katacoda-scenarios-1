@@ -6,7 +6,7 @@ Sign into Datadog, and check to see if the services have appeared by going to th
 
 ![Services Navigation](assets/services-nav.png)
 
-The page should look something like this: 
+The page should look something like this (make sure `env:slo-ws-environment` is selected as the environment):
 
 ![Services List](assets/services-list.png)
 

@@ -10,7 +10,7 @@ In the first terminal window where you currently have docker-compose running, pr
 
 Now enter a new docker-compose command using the broken image like so:
 
-`docker-compose -f ./docker-compose-files/docker-compose-broken-instrumented.yml up`
+`docker-compose -f docker-compose-broken.yml up -d`{{execute}}
 
 Wait a few minutes until the application has fully started again.
  

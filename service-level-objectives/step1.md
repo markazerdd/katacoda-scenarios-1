@@ -10,8 +10,8 @@ You can check that storedog is successfully running by clicking on the `storedog
 
 ![Port Error](assets/katacoda-error.png)
 
-In order to start populating Datadog with some interesting data in a short period of time, you can run a command to simulate traffic to the app. Click on the following command to run it in a second terminal window:
+In order to start populating Datadog with some interesting data in a short period of time, you can run a command to simulate traffic to the app. Click on the following command to start this:
 
-`cd /ecommerce-workshop/ && ./gor --input-file-loop --input-file requests_0.gor --output-http "http://localhost:3000"`{{execute T2}}
+`/ecommworkshop/gor --input-file-loop --input-file "/ecommworkshop/requests_0.gor|300%" --output-http "http://localhost:3000" >> /dev/null 2>&1`{{execute}}
 
 In the next step we'll explore the running application and start thinking about where it would be most valuable to set SLOs.
