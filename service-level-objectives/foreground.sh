@@ -1,11 +1,21 @@
 #!/bin/bash
-mkdir ecommerce-workshop
-git clone https://github.com/DataDog/ecommerce-workshop /ecommerce-workshop/
-cd /ecommerce-workshop/
-# locked to specific commit on 2020-10-02
-git checkout 9ce34516d9a65d6f09a6fffd5c4911a409d31e3f
-git reset --hard
+# Put stuff here that runs in a foreground process, visible to the learner.
 
-export POSTGRES_USER=postgres
-export POSTGRES_PASSWORD=postgres
-echo Welcome to the Ensuring Reliability with SLOs Training Workshop!
+statuscheck "workspace"
+cd /root/lab
+
+# Store learner environment variables for background.sh to access
+# ** Set DD_ENV to a unique value for your scenario. E.g. dd-201 **
+printf "DD_API_KEY=$DD_API_KEY\n\
+DD_APP_KEY=$DD_APP_KEY\n\
+POSTGRES_USER=postgres\n\
+DD_ENV=my-environment\n\ 
+POSTGRES_PASSWORD=postgres" > .env 
+
+clear
+statusupdate "environment-variables"
+statuscheck "storedog"
+
+# Display trial account credentials in terminal
+statusupdate complete
+prepenvironment
