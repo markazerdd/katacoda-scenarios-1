@@ -18,15 +18,15 @@ Try going back to the storedog homepage, selecting a product and adding it to yo
  
 Go back to the SLO details side panel. What do you see now? Your SLO status and error budget should no longer be 100% anymore. In fact, your SLO has likely already breached! This is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history, so the denominator value is very small, making the SLO sensitive to even just one error. In a real world scenario the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
 
-![SLO Detail Errors](/datadog/scenarios/service-level-objectives/assets/details-error.png)
+![SLO Detail Errors](assets/details-error.png)
  
 Try hovering over the different colored bars in the bar graph and you'll be able to see a count of good and bad events that occurred at a given time: 
 
-![Bar Graph Errors](/datadog/scenarios/service-level-objectives/assets/graph-errors.png)
+![Bar Graph Errors](assets/graph-errors.png)
 
 You should also notice that your Error Budget Monitor has now entered the `ALERT` state.
 
-![Alert State](/datadog/scenarios/service-level-objectives/assets/alert-state.png)
+![Alert State](assets/alert-state.png)
 
 When you begin to set SLOs on your own products using Datadog, your goal should always be to spend your error budget without breaching the SLO. Don't forget to experiment with your SLO targets until you find the right balance for your products and teams! This helps maintain a high standard for your end user experience, while also making goals manageable and realistic for your engineering team to accomplish.
 

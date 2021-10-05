@@ -12,12 +12,12 @@ To do this, go back to the details side panel of your SLO and select the `Set up
 2. Set the optional warning threshold. `75%` would be a sensible choice.
 3. Enter a monitor message in the large text box. In a real environment, you could type in `@` and select your name to receive an email notification.
 
-![Error Budget Monitor](/datadog/scenarios/service-level-objectives/assets/error-budget-monitor.png)
+![Error Budget Monitor](assets/error-budget-monitor.png)
 
 Save the monitor when you're done!
 
 You'll see the monitor appear under the `Alerts` tab in your SLO's side panel. Initially it will be in `NO DATA` since it was just created, before quickly transitioning to `OK` as we haven't introduced any errors yet.
 
-![Alerts Tab](/datadog/scenarios/service-level-objectives/assets/alerts-tab.png)
+![Alerts Tab](assets/alerts-tab.png)
 
 In the next step, we'll purposely introduce some errors to breach our SLO and cause our Error Budget Monitor to alert.
