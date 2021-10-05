@@ -10,9 +10,16 @@ do
   sleep 2
 done
 
+# Wait for required assets to appear in the filesystem
+until  [ -f /root/docker-compose-broken.yml ]
+do
+  sleep 2
+done
+
 # Create a tidy workspace for the learner
 mkdir /root/lab
 mv /root/docker-compose.yml /root/lab
+mv /root/docker-compose-broken.yml /root/lab
 
 statusupdate "workspace"
 statuscheck "environment-variables"
