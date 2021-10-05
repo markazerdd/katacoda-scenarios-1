@@ -6,7 +6,7 @@ Navigate to **Monitors -> New Monitors** and select type APM, or go directly to 
 
 1. The **Primary tag** should be `env:ruby-shop` by default
 2. For **Service** select `store-frontend`
-3. For **Resource** select `spree::ordercontroller_edit`
+3. For **Resource** select `spree::orderscontroller_edit`
 4. Under *Set alert conditions* set the monitor to alert when the `p99 latency` is above `1s` over the `last 5 minutes`. 
 5. Save the monitor
 
