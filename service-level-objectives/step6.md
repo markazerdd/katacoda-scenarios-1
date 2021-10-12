@@ -1,34 +1,59 @@
-# Modeling failure in our systems
+# Setting a Burn Rate Alert on our SLO
 
-Let's start introducing errors by switching images! This will allow us to explore what happens to our SLO's status and error budget and will cause our Error Budget Monitor to alert. 
- 
-In a real world scenario, a popular e-commerce site will receive a lot of traffic and there is eventually going to be some errors introduced in the application for various reasons. For now we are dealing with our hypothetical web store. 
+Error Budget Alerts are getting for keeping a team on the same page for switching priorities to prevent an SLA breach, but what if you want to detect when there is an active issue that is currently depleting your error budget at an elevated rate. Based on the priniciples from [Chapter 5 of the Google SRE Workbook](https://sre.google/workbook/alerting-on-slos/), you can now set Burn Rate Alerts on Datadog SLOs!
 
-Close all storedog tabs that you have open in your browser.
- 
-In the first terminal window where you currently have docker-compose running, press CTRL + C to stop the command. Wait 10 to 15 seconds until docker-compose gracefully stops and you regain the ability to type commands in the terminal window.
+Unlike Error Budget Alerts, Burn Rate Alerts are intended for active incident response. A Burn Rate Alert is composed of three components:
 
-Now enter a new docker-compose command using the broken image like so:
+1. A burn rate threshold
+2. A long window for evaluating the alert
+3. A short window for evaluating the alert
 
-`docker-compose -f docker-compose-broken.yml up -d`{{execute}}
+## Burn Rates
 
-Wait a few minutes until the application has fully started again.
- 
-Try going back to the storedog homepage, selecting a product and adding it to your cart. What happens when you do this? You should be getting a NoMethodError. In the real world this could have been any error that causes a manage cart request to fail. Press the back button in your browser and try adding other items to your cart to purposely induce more errors.
- 
-Go back to the SLO details side panel. What do you see now? Your SLO status and error budget should no longer be 100% anymore. In fact, your SLO has likely already breached! This is due to the relatively low traffic and the trace metrics only having less than an hour's worth of history, so the denominator value is very small, making the SLO sensitive to even just one error. In a real world scenario the number of total events will be in the thousands or millions, so one error wouldn't normally have such a large impact.
+A burn rate is a unitless number that indicates how fast your error budget is being consumed relative to the length of your SLO’s target. For example, for a 30-day target a burn rate of 1 means your error budget would be fully consumed in exactly 30 days if the rate of 1 was kept constant. A burn rate of 2 means the error budget would be exhausted in 15 days if kept constant, a burn rate of 3 means 10 days, etc.
 
-![SLO Detail Errors](assets/details-error.png)
- 
-Try hovering over the different colored bars in the bar graph and you'll be able to see a count of good and bad events that occurred at a given time: 
+To measure the observed burn rate your SLO experiences, a burn rate alert will use the recent “error rate” in its calculation. Note that “error rate” here just means the ratio of bad behavior over total behavior during a **given time period**: 
 
-![Bar Graph Errors](assets/graph-errors.png)
+error rate = 1 - (good behavior during time period/total behavior during time period)
 
-You should also notice that your Error Budget Monitor has now entered the `ALERT` state.
+In an ideal world, your SLOs would always experience a burn rate of 1; meaning you're always spending your error budget fully without overspending it. Mathemetically a burn rate of 1 is equal to your error budget in fractional form: 1 - SLO Target (e.g the SLO we just created has an ideal error rate of 1 - 0.99 = 0.01). 
 
-![Alert State](assets/alert-state.png)
+However, in real life issues will pop up that cause your burn rate to increase suddenly until the issue is resolved. The purpose of a burn rate alert is to detect these increases and notify you about them so you can resolve the issue and bring the burn rate back down again. 
 
-When you begin to set SLOs on your own products using Datadog, your goal should always be to spend your error budget without breaching the SLO. Don't forget to experiment with your SLO targets until you find the right balance for your products and teams! This helps maintain a high standard for your end user experience, while also making goals manageable and realistic for your engineering team to accomplish.
+## Long and Short Windows
 
-That concludes the required steps of this workshop, Steps 7 and 8 are optional if you are interested! We hope this workshop was valuable to you and showed you that by being diligent with creating and managing SLOs for critical user journeys, we can uncover user experience issues and take action to resolve them quickly to reduce their impact!
+A Burn Rate Alert will always measure the observed error rate of your SLO during two different rolling windows simultaneously. These windows are your long window and short window. 
 
+In order for your Burn Rate Alerts to be most useful, you want them to: 
+
+1. Alert you when burn rate has been elevated for a significant period of time (you don't want to be notified every time a 1 second spike in burn rate happens due to a transient issue) 
+2. Stop alerting you as soon as the burn rate goes back down (you want your alerts to recover when the issue itself resolves)
+
+This is the purpose of the long window and short window, respectively.
+
+## How Burn Rate Alerts Work
+
+Combining your burn rate threshold, long window and short window, you get a Burn Rate Alert. Burn Rate Alerts evaluate the following formula in order to determine when to notify you:
+
+![Burn Rate Alert Formula](assets/burn-rate-formula.jpeg)
+
+As you can see, both the observed error rate is divided by your ideal error rate and measured during both the long window and short window to see if the burn rate threshold is violated during either time periods. If both the long window and short window measurements violate the threshold, then you will be notified. By checking both conditions, you know the alerts you get are both significant and ongoing.
+
+## Configuring a Burn Rate Alert
+
+Now that we've established the concepts we need, let's set our own Burn Rate Alert! 
+
+To do this, go back to the details side panel of your SLO and select the `Set up Alerts` button. This will take you to a configuration page for you to set your Error Budget Alert. In a real world scenario, it would make sense to get notified a bit before we've completely spent our error budget, so let's set our thresholds accordingly.
+
+1. Set the alert threshold to `7` so that the monitor is configured to notify us if our burn rate is high enough to deplete our entire error budget in one day.
+2. Set the optional warning threshold. `3.5` would be a sensible choice.
+3. Let's keep the long window at its default value of `1h`, the short window is automatically calculated as 1/12 of the long window based on Google's recommendations for Burn Rate Alerts.
+4. Enter a monitor message in the large text box. In a real environment, you could type in `@` and select your name to receive an email notification.
+
+![Placeholder](assets/placeholder.png)
+
+Save the monitor when you're done!
+
+You'll see the new alert appears under the `Alerts` tab in your SLO's side panel. Initially it will be in `NO DATA` since it was just created, before quickly transitioning to `OK` as we haven't introduced any errors yet.
+
+In the next step, we'll purposely inject errors into our systems to see how our SLO and SLO alerts behave.

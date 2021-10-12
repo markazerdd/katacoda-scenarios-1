@@ -8,13 +8,13 @@ Navigate to create a new SLO to track the error rate of the requests for managin
 
 There are two SLO types to pick from: `Metric Based` or `Monitor Based`.
 
-Metric Based SLOs take a count-based approach to defining the SLI. The SLO will track a success ratio of a metric(s) that corresponds to good events (the numerator) over a metric(s) that correspond to total events (the denominator).
+Metric Based SLOs take a count-oriented approach to defining the SLI. The SLO will track a success ratio of a metric(s) that corresponds to good events (the numerator) over a metric(s) that correspond to total events (the denominator).
 
-Monitor Based SLOs take a time-based approach to defining the SLI. The SLO will track how much time an existing Datadog monitor(s) spends in the ALERT state (bad) vs a non-ALERT state (good).
+Monitor Based SLOs take a time-oriented approach to defining the SLI. The SLO will track how much time a Datadog monitor(s) spends in the ALERT state (downtime) vs a non-ALERT state (uptime).
 
-In this case, we care about availability and error rate so we'll select `Metric Based` under `Define The Source` for our SLI creation. Using this SLO type, we can set a target percentage of requests that should be successful. 
+In this case, we care about availability and error rate so we'll use a Metric Based SLO. Using this SLO type, we can set a target percentage of requests that should be successful. 
 
-**First step:** We need to define what our good events are. In the previous step, we mentioned that we have two trace metrics we can use for these requests: `trace.rack.request.hits` and `trace.rack.request.errors`. However, the metrics correspond to total events and bad events, respectively. So how are we supposed to define good events?
+**First step:** We need to define what our good events are. In the previous step, we mentioned that we have two trace metrics we can use for these requests: `trace.rack.request.hits` and `trace.rack.request.errors`. However, these metrics correspond to total events and bad events, respectively. So how are we supposed to define good events?
 
 Simple! Good events are just the total events minus the bad events and we can configure the numerator query with this arithmetic!
 
