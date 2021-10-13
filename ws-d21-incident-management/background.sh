@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -s https://datadoghq.dev/katacodalabtools/r?raw=true|bash
+curl -sk https://datadoghq.dev/katacodalabtools/r?raw=true|bash
 
 sudo apt-get update 
 sudo apt-get install -y pkg-config libcairo2-dev
