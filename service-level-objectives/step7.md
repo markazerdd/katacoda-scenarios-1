@@ -30,4 +30,4 @@ You should also notice that your Error Budget Monitor has now entered the `ALERT
 
 When you begin to set SLOs on your own products using Datadog, your goal should always be to spend your error budget without breaching the SLO. Don't forget to experiment with your SLO targets until you find the right balance for your products and teams! This helps maintain a high standard for your end user experience, while also making goals manageable and realistic for your engineering team to accomplish.
 
-That concludes the required steps of this workshop, Steps 7 and 8 are optional if you are interested! We hope this workshop was valuable to you and showed you that by being diligent with creating and managing SLOs for critical user journeys, we can uncover user experience issues and take action to resolve them quickly to reduce their impact!
+That concludes the required steps of this workshop, Step 8 is optional if you are interested! We hope this workshop was valuable to you and showed you that by being diligent with creating and managing SLOs for critical user journeys, we can uncover user experience issues and take action to resolve them quickly to reduce their impact!

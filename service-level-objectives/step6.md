@@ -1,6 +1,6 @@
 # Setting a Burn Rate Alert on our SLO
 
-Error Budget Alerts are getting for keeping a team on the same page for switching priorities to prevent an SLA breach, but what if you want to detect when there is an active issue that is currently depleting your error budget at an elevated rate. Based on the priniciples from [Chapter 5 of the Google SRE Workbook](https://sre.google/workbook/alerting-on-slos/), you can now set Burn Rate Alerts on Datadog SLOs!
+Error Budget Alerts are getting for keeping a team on the same page for switching priorities to prevent an SLA breach, but what if you want to detect when there is an active issue that is currently depleting your error budget at an elevated rate. Based on the principles from [Chapter 5 of the Google SRE Workbook](https://sre.google/workbook/alerting-on-slos/), you can now set Burn Rate Alerts on Datadog SLOs!
 
 Unlike Error Budget Alerts, Burn Rate Alerts are intended for active incident response. A Burn Rate Alert is composed of three components:
 
@@ -16,7 +16,7 @@ To measure the observed burn rate your SLO experiences, a burn rate alert will u
 
 error rate = 1 - (good behavior during time period/total behavior during time period)
 
-In an ideal world, your SLOs would always experience a burn rate of 1; meaning you're always spending your error budget fully without overspending it. Mathemetically a burn rate of 1 is equal to your error budget in fractional form: 1 - SLO Target (e.g the SLO we just created has an ideal error rate of 1 - 0.99 = 0.01). 
+In an ideal world, your SLOs would always experience a burn rate of 1; meaning you're always spending your error budget fully without overspending it. Mathematically a burn rate of 1 is equal to your error budget in fractional form: 1 - SLO Target (e.g the SLO we just created has an ideal error rate of 1 - 0.99 = 0.01). 
 
 However, in real life issues will pop up that cause your burn rate to increase suddenly until the issue is resolved. The purpose of a burn rate alert is to detect these increases and notify you about them so you can resolve the issue and bring the burn rate back down again. 
 
