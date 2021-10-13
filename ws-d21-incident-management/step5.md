@@ -1,18 +1,22 @@
-Looking at `ads.py`{{open}}, you'll notice that two `time.sleep()` commands (Lines 43-44 and Lines 66-67) were left after testing. 
+In Datadog, you can declare an incident from several locations within the app. You are going to be declaring one from a dashboard graph, but you could just as easily declare an incident from:
+- The Datadog clipboard: 
+![Create Incident from Clipboard](assets/from_cb.png)
+- The navigation:
+![New Incident from Navigation](assets/from_sidebar.png)
+- A button on a monitor:
+![Declare Incident from Monitor](assets/declare_incident.png)
 
-Return to the incident **Remediation** tab and close the "Investigate ad service code..." task. 
+Navigate to the monitor in the "ALERT" status from the previous step. The **MESSAGE** section contains a link to the Storedog Dashboard. Click this link to view the dashboard.
 
-You now have the knowledge to declare the root cause of the incident. Edit the incident on the incident Overview tab and set *root cause* to: `Debug statements left in the ad service code`{{copy}}.
+The first widget graphs the same metric as the monitor. Declare an incident from here by hovering over the upper-right corner of the widget to reveal the action icons. Click on the **Export icon** and then select **Declare incident**. 
+![Create Incident from Dashboard Graph](assets/from_graph.png)
 
-Click the **Save** button.
+The resulting modal will ask you to assign some properties to the incident:
 
-You can now add a final remediation task - "Fix ad service code @[Ad Service Engineer]". 
+- Title - Give the incident a title of `[your initials] Latency Issue on Homepage`{{copy}}
+- Severity - Leave this as unknown for right now, you will come back to this once you know some more about the incident.
+- Incident Commander - Here you can assign someone to lead the incident investigation. Since the lab account is a standalone account, leave this assigned to you. (Note that in this lab, your username is a string of random alphanumeric characters.)
+- Notifications - You can notify others about this incident. In your normal Datadog account, you would include other people, but not in this lab environment.
+- Context and Signals - You'll see that Datadog has already included the graph as a signal that you are raising this incident from. You can attach other signals here by pasting them, but for now just leave it as is.
 
-In the lab IDE, in `ads.py`{{open}}, delete the debug lines containing the sleep commands. Changes are auto-saved after a second. (In production, you'd likely make a PR to remedy this issue. You could add this as a note in the incident timeline.)
-
-Removing these lines of code should fix the latency issue. It may take a couple of minutes for the monitor in Datadog to turn green.
-
-Once it does, you can:
-- mark your remediation task complete
-- in the customer impact section, toggle "Active" off (and adjust the end time if desired)
-- change the incident status to "RESOLVED"
+When you have finished filling out the title in the modal, click the **Declare Incident** button at the bottom to complete creation of the incident.
