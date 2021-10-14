@@ -20,14 +20,14 @@ Simple! Good events are just the total events minus the bad events and we can co
 
 1. In the numerator field select `trace.rack.request.hits` 
 2. Press the **Add Query** button, and a second metric query row will appear labelled *b*
-3. For metric b, select `trace.rack.request.errors`. Since there haven’t been any errors, you’ll probably need to edit the query directly by clicking `</>` and entering `sum:trace.rack.request.errors{service:store-frontend,resource_name:spree::orderscontroller_edit,env:ruby-shop}.as_count()` manually. 
+3. For metric b, select `trace.rack.request.errors`. Since there haven’t been any errors, you’ll probably need to edit the query directly by clicking `</>` and entering `sum:trace.rack.request.errors{service:store-frontend,resource_name:spree::orderscontroller_edit,env:slo-ws-environment}.as_count()` manually. 
 ![Error Metric Query](assets/error-metric.png)
 4. Change the expression `a + b` to `a - b`
-5. For both metrics make sure to scope them down to the resource we are tracking by selecting `service:store-frontend`, `resource_name:spree::ordercontroller_edit` and `env:ruby-shop` in the **from** clause of both metrics. 
+5. For both metrics make sure to scope them down to the resource we are tracking by selecting `service:store-frontend`, `resource_name:spree::ordercontroller_edit` and `env:slo-ws-environment` in the **from** clause of both metrics. 
 
 This subtraction query now repesents all “good” (successful) requests to manage our carts.
 
-**Second step:** We now need to define our total events. The metric `trace.rack.request.hits` already represents total events, so select it and make sure to also scope it down to `service:store-frontend`, `resource_name:spree::ordercontroller_edit` and `env:ruby-shop` in the **from** clause.
+**Second step:** We now need to define our total events. The metric `trace.rack.request.hits` already represents total events, so select it and make sure to also scope it down to `service:store-frontend`, `resource_name:spree::ordercontroller_edit` and `env:slo-ws-environment` in the **from** clause.
 
 ![SLI Edit](assets/sli-edit.png)
 
