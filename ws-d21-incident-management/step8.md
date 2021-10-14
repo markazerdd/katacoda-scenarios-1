@@ -14,7 +14,7 @@ And then "Add to Incident Timeline":
 
 This message will be added to the postmortem timeline when it is generated.
 
-You can now add a final remediation task - "Fix ad service code" and assign it to another team member.
+You can now add a final remediation task - "Fix ad service code" and assign it to another person.
 
 Since all the data for this organization is coming from the Instructor's environment, please notify the instructor you are ready for the change to be made. We'll pause here while other participants determine the fix needed.
 

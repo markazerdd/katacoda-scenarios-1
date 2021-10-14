@@ -1,6 +1,6 @@
 Now that you have a general idea of the issue, its time to determine the root cause and remediate it. In the **Remediation** tab of the incident, you can add related documents for addressing this type of issue. You can also create and assign tasks here related to the incident.
 
-You can also create tasks from within Slack. Open the channel for your incident in Slack. Within that channel type `/datadog task` to create a new task for an on-call engineer. In the **Describe Task** text area, type "Look at app traces". Assign this task to someone in your Slack team.
+You can also create tasks from within Slack. Open the channel for your incident in Slack. Within that channel type `/datadog task` to create a new task for an on-call engineer. In the **Describe Task** text area, type "Look at app traces". Assign this task to someone in Slack (you'll actually be the one to do it, but we want you to see this functionality)
 
 Click the **Create Task** button.
 

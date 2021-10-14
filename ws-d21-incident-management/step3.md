@@ -15,5 +15,3 @@ And sign in with Slack:
 ![Sign in with Slack](assets/sign_in_slack.png)
 
 Your account should now be connected. Please ask a TA for help if you have any problems.
-
-Within Slack, you should have been placed into a team channel. If you are not currently a member of a channel that starts with `#team`, please join one that has less than 5 people in it.
