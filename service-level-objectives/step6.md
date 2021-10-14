@@ -12,13 +12,13 @@ Unlike Error Budget Alerts, Burn Rate Alerts are intended for active incident re
 
 A burn rate is a unitless number that indicates how fast your error budget is being consumed relative to the length of your SLO’s target. For example, for a 30-day target a burn rate of 1 means your error budget would be fully consumed in exactly 30 days if the rate of 1 was kept constant. A burn rate of 2 means the error budget would be exhausted in 15 days if kept constant, a burn rate of 3 means 10 days, etc.
 
-To measure the observed burn rate your SLO experiences, a burn rate alert will use the recent “error rate” in its calculation. Note that “error rate” here just means the ratio of bad behavior over total behavior during a **given time period**: 
+To measure the observed burn rate your SLO experiences, a Burn Rate Alert will use the recent “error rate” in its calculation. Note that “error rate” here just means the ratio of bad behavior over total behavior during a **given time period**: 
 
 error rate = 1 - (good behavior during time period/total behavior during time period)
 
 In an ideal world, your SLOs would always experience a burn rate of 1; meaning you're always spending your error budget fully without overspending it. Mathemetically a burn rate of 1 is equal to your error budget in fractional form: 1 - SLO Target (e.g the SLO we just created has an ideal error rate of 1 - 0.99 = 0.01). 
 
-However, in real life issues will pop up that cause your burn rate to increase suddenly until the issue is resolved. The purpose of a burn rate alert is to detect these increases and notify you about them so you can resolve the issue and bring the burn rate back down again. 
+However, in real life issues will pop up that cause your burn rate to increase suddenly until the issue is resolved. The purpose of a Burn Rate Alert is to detect these increases and notify you about them so you can resolve the issue and bring the burn rate back down again. 
 
 ## Long and Short Windows
 
