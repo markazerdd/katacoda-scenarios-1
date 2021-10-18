@@ -8,6 +8,8 @@ In Datadog, you can declare an incident from several locations within the app. Y
 
 Navigate to the monitor in the "ALERT" status from the previous step. The **MESSAGE** section contains a link to the Storedog Dashboard. Click this link to view the dashboard.
 
+![Monitor Message Section](assets/monitor-message.jpeg)
+
 The first widget graphs the same metric as the monitor. Declare an incident from here by hovering over the upper-right corner of the widget to reveal the action icons. Click on the **Export icon** and then select **Declare incident**. 
 ![Create Incident from Dashboard Graph](assets/from_graph.png)
 
