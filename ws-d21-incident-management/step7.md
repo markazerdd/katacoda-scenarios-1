@@ -21,7 +21,7 @@ Click the **Open Full Page** link in the upper-right corner of this panel to ope
 
 You can now mark the trace investigation task complete. Recall the task list with `/datadog task list` and click "Mark Completed".
 
-Add a task to "Investigate ad service code" (Assign this to another person on your team). Back in the incident overview in the Datadog UI, you can also add the "advertisements-service" as a service related to the incident.
+Add a task to `Investigate ad service code`{{copy}} and assign this to the `Ad Service Engineer`. Back in the incident overview in the Datadog UI, you can also add the "advertisements-service" as a service related to the incident.
 
 Click the **Save** button.
 
