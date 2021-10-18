@@ -4,6 +4,6 @@ By now, your Datadog account should have been added to this organization. You wi
 
 ![Switch Organization](assets/switch_org.png)
 
-Click on your name in the bottom left of the Datadog UI and select the "Workshop Incident Management" organization. If you don't see this organization, refresh the page. If you still don't see it, send one of the TAs the Datadog username from the `creds`{execute} command.
+Click on your name in the bottom left of the Datadog UI and select the "Workshop Incident Management" organization. If you don't see this organization, refresh the page. If you still don't see it, send one of the TAs the Datadog username from the `creds`{{execute}} command.
 
 You will use this organization for the rest of this workshop.
