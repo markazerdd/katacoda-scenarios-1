@@ -6,7 +6,7 @@ You now have the knowledge to declare the root cause of the incident. Edit the i
 
 Click the **Save** button.
 
-After this incident is resolved, you might want to consider an automated check for this type of issue. Within the incident's Slack channel send a message regarding this ("Consider an automated check for commented out code"). After it's sent, hover over the message and click "More actions":
+After this incident is resolved, you might want to consider an automated check for this type of issue. Within the incident's Slack channel send a message regarding this, `Consider an automated check for commented out code`{{copy}}. After it's sent, hover over the message and click "More actions":
 ![More Actions](assets/more_actions.png)
 
 And then "Add to Incident Timeline":
@@ -14,7 +14,7 @@ And then "Add to Incident Timeline":
 
 This message will be added to the postmortem timeline when it is generated.
 
-You can now add a final remediation task - "Fix ad service code" and assign it to another person.
+You can now add a final remediation task - `Fix ad service code`{{copy}} and also assign it to the `Ad Service Engineer`.
 
 Since all the data for this organization is coming from the Instructor's environment, please notify the instructor you are ready for the change to be made. We'll pause here while other participants determine the fix needed.
 
