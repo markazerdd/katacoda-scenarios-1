@@ -2,11 +2,11 @@ You should already be signed into the [Slack workspace](https://2021-im-workshop
 
 The Slack integration is already installed for the Datadog organization, but additional steps are needed to connect _your_ Datadog/Slack identity.
 
-Within Slack, type the `/datadog` command to see the available Datadog Slack commands. You'll notice at the top a prompt to "Connect Datadog Account":
+Within Slack, type the `/datadog` command in any channel to see the available Datadog Slack commands. This will post a message only you can see that gives an overview of the Slash commands available in the Datadog Slack App. Since you haven't connected your Datadog account yet, you'll also notice at the top a prompt to "Connect Datadog Account":
 
 ![Connect Datadog Account](assets/connect_datadog.png)
 
-Click this and follow the prompts to generate an application key:
+Click this and follow the prompts to generate an application key (**note:** make sure you are in the _Workshop Incident Management_ Datadog Organization from Step 2):
 
 ![Generate Application Key](assets/generate_key.png)
 

@@ -1,11 +1,11 @@
 After resolving an incident, its important to reflect on what happened and use the experience as a learning opportunity for the organization. Many times, writing a postmortem becomes a task that is put off and may end up being written too long after the incident. Writing the postmortem too long after the fact can result in a loss of context or important details. Luckily, Datadog will offer to create a Postmortem document for you.
 
 Follow the prompts to generate one for your lab incident:
-![Postmortem Modal](assets/postmortem_modal.png)
+![Postmortem Generation](assets/postmortem_generation.jpeg)
 This populates a Datadog notebook with details from the timeline of the incident including links to Datadog resources referenced during the investigation and remediation.
 
 The document created will have timestamped information uncovered during the incident, but it is important to review the document and add details where appropriate. It will be linked in the incident if you ever need to reference it:
-![Postmortem Link](assets/postmortem_link.png)
+![Postmortem Link](assets/postmortem_link.jpeg)
 
 Think about what caused the incident and how it could be prevented in the future. Could a test be added to your release process to catch similar issues?
 

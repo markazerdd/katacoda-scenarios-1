@@ -10,35 +10,35 @@
         "text": "step1.md"
       },
       {
-        "title": "Declaring an Incident",
+        "title": "Switching Datadog Organizations",
         "text": "step2.md"
       },
       {
-        "title": "Incident Overview",
+        "title": "Connecting the Workshop Slack",
         "text": "step3.md"
       },
       {
-        "title": "Investigation",
+        "title": "Responding to an Alert",
         "text": "step4.md"
       },
       {
-        "title": "Remediation",
+        "title": "Declaring an Incident",
         "text": "step5.md"
       },
       {
-        "title": "Postmortem",
+        "title": "Adding Context",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Investigating the Incident",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Resolving the Incident",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Generating a Postmortem",
         "text": "step9.md"
       }
     ],

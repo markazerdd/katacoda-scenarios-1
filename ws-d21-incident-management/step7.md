@@ -1,8 +1,10 @@
 Now that you have a general idea of the issue, its time to determine the root cause and remediate it. In the **Remediation** tab of the incident, you can add related documents for addressing this type of issue. You can also create and assign tasks here related to the incident.
 
-You can also create tasks from within Slack. Open the channel for your incident in Slack. Within that channel type `/datadog task` to create a new task for an on-call engineer. In the **Describe Task** text area, type "Look at app traces". Assign this task to someone in Slack (you'll actually be the one to do it, but we want you to see this functionality)
+You can also create tasks from within Slack. Open the channel for your specific incident in Slack. Within that channel, type `/datadog task` to create a new task. In the **Describe Task** text area, type `Look at app traces`{{copy}} and assign it to the `On-Call Engineer`.
 
 Click the **Create Task** button.
+
+![Placeholder](placeholder.jpeg)
 
 Note that within the Datadog UI, you can adjust the due date or assignees for tasks after they are created.
 
@@ -19,7 +21,7 @@ Click the **Open Full Page** link in the upper-right corner of this panel to ope
 
 You can now mark the trace investigation task complete. Recall the task list with `/datadog task list` and click "Mark Completed".
 
-Add a task to "Investigate ad service code" (Assign this to another person on your team). Back in the incident overview in the Datadog UI, you can also add the "advertisements-service" as a service related to the incident.
+Add a task to `Investigate ad service code`{{copy}} and assign this to the `Ad Service Engineer`. Back in the incident overview in the Datadog UI, you can also add the "advertisements-service" as a service related to the incident.
 
 Click the **Save** button.
 
