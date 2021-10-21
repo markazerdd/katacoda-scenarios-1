@@ -14,8 +14,6 @@ And then "Add to Incident Timeline":
 
 This message will be added to the postmortem timeline when it is generated.
 
-You can now add a final remediation task - `Fix ad service code`{{copy}} and also assign it to the `Ad Service Engineer`.
-
 Since all the data for this organization is coming from the Instructor's environment, please notify the instructor you are ready for the change to be made. We'll pause here while other participants determine the fix needed.
 
 After the instructor adjusts the code, the latency issue should resolve. It may take a couple of minutes for the monitor in Datadog to turn green.
