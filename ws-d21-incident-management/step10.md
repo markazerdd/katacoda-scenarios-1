@@ -5,6 +5,7 @@ Datadog provides you with a queryable Incident Management Analytics data source,
 Let's head to the Dashboard template, [here](https://app.datadoghq.com/dash/integration/30523/incident-management-overview?from_ts=1634171657095&to_ts=1634776457095&live=true)
 
 To explore the queries in this Dashboard and customize them, we first need to clone the Dashboard to make our own editable copy. To do so click the `Clone Dashboard` button at the top of the page next to the title of the Dashboard. 
+
 ![Clone Dashboard](assets/clone_dashboard.jpeg)
 
 Give your cloned Dashboard the title: `[your initials] Workshop Analytics`{{copy}}
@@ -28,7 +29,7 @@ Let's try adding a new Timeseries widget from scratch that visualizes the Daily 
 8. Change the rollup option from `(auto)` to `1d` to get daily data point for this measure
 9. Click `Save`
 
-![Analytics Example](assests/analytics_example.jpeg)
+![Analytics Example](assets/analytics_example.jpeg)
 
 You've now queried Incident Management Analytics for the first time. Of course, in a real world scenario you're going to want to query many different aspects of your incident response. We encourage to explore creating other widgets and making different queries for Incident Management Analytics yourself.
 
