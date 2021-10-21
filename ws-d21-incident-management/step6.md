@@ -8,7 +8,7 @@ Since the organization is connected to the Slack workspace, you'll see a notific
 
 Because this incident was opened from a graph, you're able to see a live view of it in the **Timeline** tab of the incident. You can click the **external link** icon in the upper-right corner of the graph to view it fullscreen in the context of the Storedog Frontend Dashboard.
 
-![Placeholder](placeholder.jpeg)
+![Incident Timeline](assets/incident-timeline.jpeg)
 
 After some investigation here (full details of how to come to this conclusion are in the Introduction to Application Performance Monitoring course), you've determined that the service affected is `store-frontend` and that requests to the home page are slow.
 
