@@ -40,6 +40,10 @@
       {
         "title": "Generating a Postmortem",
         "text": "step9.md"
+      },
+      {
+        "title": "Analyzing Incident Response History",
+        "text": "step10.md"
       }
     ],
     "intro": {
