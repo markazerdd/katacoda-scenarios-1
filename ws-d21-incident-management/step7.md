@@ -4,7 +4,7 @@ You can also create tasks from within Slack. Open the channel for your specific 
 
 Click the **Create Task** button.
 
-![Placeholder](placeholder.jpeg)
+![Create Task](assets/create_task.png)
 
 Note that within the Datadog UI, you can adjust the due date or assignees for tasks after they are created.
 
