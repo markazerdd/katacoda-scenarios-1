@@ -1,6 +1,8 @@
 Looking at `ads.py`{{open}}, you'll notice that two `time.sleep()` commands (Lines 43-44 and Lines 66-67) were left after testing. 
 
-Recall the task list in Slack by typing `/datadog task list` and close the "Investigate ad service code..." task. 
+The instructor will fix the code, so now you can mark the investigation task complete by clicking its checkbox in the Remediation tab. 
+
+If you click the `storedog` tab a minute or so after the instructor makes the change, storedog should be loading much faster now.
 
 You now have the knowledge to declare the root cause of the incident. Edit the incident on the incident Overview tab and set *root cause* to: `Debug statements left in the ad service code`{{copy}}.
 
